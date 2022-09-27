@@ -1,10 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 
-const ToggleLink = ({ title, links, handleToggle, id, pathLink }) => {
+const ToggleLink = ({ title, links, handleToggle, id }) => {
   const path = useLocation().pathname;
 
   return (
@@ -22,7 +20,6 @@ const ToggleLink = ({ title, links, handleToggle, id, pathLink }) => {
         >
           <div className="l-head">
             <span>{title}</span>
-            {links && <FontAwesomeIcon icon={faChevronDown} />}
           </div>
         </Container>
       </LiStyled>
@@ -42,10 +39,10 @@ const LiStyled = styled.li`
 
   .active-toggle {
     color: var(--primary-color);
-    border-radius: 10px;
-    svg {
+
+    @media screen and (max-width: 900px) {
       color: black;
-      transform: rotate(180deg);
+      background-color: var(--primary-color);
     }
   }
 
@@ -77,6 +74,7 @@ const Container = styled.div`
 
   span {
     font-family: var(--Branding-sf-medium);
+    -webkit-text-stroke: 0.8px;
   }
 
   @media screen and (min-width: 900px) {
