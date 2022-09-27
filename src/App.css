@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "LED Calculator";
+  src: url(./fonts/LEDCalculator.ttf);
+}
+@font-face {
+  font-family: "Neue Helvetica heavy";
+  src: url(./fonts/Helvetica-Neue-LT-Com-83-Heavy-Extended.ttf);
+}
+@font-face {
+  font-family: "Neue Helvetica black";
+  src: url(./fonts/Helvetica-Neue-LT-Com-83-Heavy-Extended.ttf);
+}
+@font-face {
+  font-family: "Branding SF light";
+  src: url(./fonts/BrandingSF-Light.ttf);
+}
+@font-face {
+  font-family: "Branding SF medium";
+  src: url(./fonts/BrandingSF-Medium.ttf);
+}
+@font-face {
+  font-family: "Branding SF bold";
+  src: url(./fonts/BrandingSF-Bold.ttf);
+}
+
+:root {
+  --primary-color: #a1d283;
+  --secondary-color: #008753;
+  --calculator: "LED Calculator", cursive;
+  --Neue-Helvetica-heavy: "Neue Helvetica heavy", sans-serif;
+  --Neue-Helvetica-black: "Neue Helvetica black", sans-serif;
+  --Branding-sf-light: "Branding SF light", sans-serif;
+  --Branding-sf-medium: "Branding SF medium", sans-serif;
+  --Branding-sf-bold: "Branding SF bold", sans-serif;
+  --inter: "Inter", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: #252525;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--Branding-sf-bold);
+}
+
+button,
+.btn-link {
+  background-color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-family: var(--Branding-sf-medium);
+  transition: all 0.4s;
+}
+button:disabled,
+.btn-link:disabled {
+  background-color: rgba(161, 210, 131, 0.19);
+  color: #797979;
+}
+
+@media screen and (min-width: 600px) {
+  button {
+    font-size: 18px;
+    border-radius: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(161, 210, 131, 0.34);
+  background-color: #252525;
+  outline: none;
+  transition: all 0.3s ease-in;
+  width: 100%;
+  color: white;
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.41);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid rgba(185, 243, 149, 0.6);
+}
+.calculator {
+  font-family: var(--calculator);
+}
