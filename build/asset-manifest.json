@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.33892a15.js",
+    "main.js": "/static/js/main.52886637.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.846b3c948d1606a85f58.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -97,11 +97,12 @@
     "static/media/add-circle.svg": "/static/media/add-circle.d612304a0919d0ec7b4578b68043e97f.svg",
     "static/media/subs-circle.svg": "/static/media/subs-circle.7f04578b407372637a91f31dfbb977de.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.ca40cd64110f3e9c151857d4e74cc7e3.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.33892a15.js.map": "/static/js/main.33892a15.js.map"
+    "main.52886637.js.map": "/static/js/main.52886637.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.33892a15.js"
+    "static/js/main.52886637.js"
   ]
 }

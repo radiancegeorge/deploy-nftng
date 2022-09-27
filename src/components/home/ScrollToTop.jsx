@@ -1,14 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { useScroll } from "../../utils/useScroll";
 
 const ScrollToTop = () => {
+  const scroll = useScroll();
   return (
-    <Link to="home" spy={true} smooth={true} offset={0} duration={100}>
-      <Container>
-        <span className="calculator">Top</span>
-      </Container>
-    </Link>
+    <>
+      {scroll > 600 && (
+        <Link to="home" spy={true} smooth={true} offset={0} duration={100}>
+          <Container>
+            <span className="calculator">Top</span>
+          </Container>
+        </Link>
+      )}
+    </>
   );
 };
 
@@ -16,12 +22,12 @@ export default ScrollToTop;
 
 const Container = styled.div`
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 20px;
   width: 65px;
   height: 65px;
   background-color: var(--primary-color);
-  bottom: 30px;
+  top: 80vh;
   border-radius: 50%;
   left: calc(100% - 80px);
   transform: translateX(-50%);

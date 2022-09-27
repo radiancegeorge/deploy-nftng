@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import green from "../../img/svg/green.svg";
 import orange from "../../img/svg/orange.svg";
 import mouse from "../../img/svg/mouse.svg";
+import arrow from "../../img/svg/arrow-down.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -42,6 +43,10 @@ const HomeHeroSection = () => {
         <Link to="/about" className="btn-link">
           Learn more about NFT.ng
         </Link>
+        <div className="down">
+          <span>Scroll down</span>
+          <img src={arrow} alt="" className="bounce" />
+        </div>
       </Wrapper>
     </Container>
   );
@@ -78,8 +83,6 @@ const Container = styled.div`
     60% {
       transform: translateY(-8px);
     }
-  }
-  @media screen and (min-width: 900px) {
   }
 `;
 
@@ -177,7 +180,23 @@ const Wrapper = styled.div`
     font-size: 16px;
     padding: 14px;
   }
+  .down {
+    display: none;
+    font-size: 13px;
+    color: white;
+    margin-top: 38px;
+    font-family: var(--Branding-sf-medium);
+
+    align-items: center;
+  }
   @media screen and (max-width: 900px) {
+    .down {
+      display: flex;
+      gap: 4px;
+    }
+    .btn-link {
+      font-size: 14px;
+    }
     .hero-desc,
     .sub {
       font-size: 14px;
