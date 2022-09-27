@@ -28,7 +28,7 @@ const FaqSection = () => {
             For some of the answers to your questions in this section! Then keep
             buzzing
           </p>
-          <Link to="/faq">
+          <Link to="/faq" className="see-more">
             <span>See more</span>
           </Link>
         </LeftWrap>
@@ -55,7 +55,12 @@ export default FaqSection;
 
 const Container = styled.div`
   padding: 0 10vw 60px;
+  position: relative;
   display: flex;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    padding: 0 20px 30px;
+  }
 `;
 
 const LeftWrapper = styled.div`
@@ -79,6 +84,22 @@ const LeftWrap = styled.div`
     line-height: 30px;
     margin: 18px 0;
     max-width: 500px;
+  }
+  @media screen and (max-width: 900px) {
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 23px;
+    }
+    .see-more {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
   }
 `;
 

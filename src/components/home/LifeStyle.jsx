@@ -66,13 +66,22 @@ export default LifeStyle;
 
 const Container = styled.div`
   margin-bottom: 90px;
+  @media screen and (max-width: 900px) {
+    padding: 0 20px;
+  }
 `;
 
 const Wrapper = styled.div`
   h3 {
     font-size: 30px;
     color: white;
-    font-family: var(--Branding-sf-bold);
+    font-family: var(--Branding-sf-medium);
+    -webkit-text-stroke: 0.5px;
+  }
+  @media screen and (max-width: 900px) {
+    h3 {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -80,7 +89,6 @@ const Links = styled.div`
   display: flex;
   gap: 0 5vw;
   justify-content: center;
-
   margin-bottom: 100px;
   .wrap {
     max-width: 300px;
@@ -101,6 +109,24 @@ const Links = styled.div`
       background-color: #252525;
       color: var(--primary-color);
       border: 1px solid var(--primary-color);
+    }
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .wrap {
+      padding: 50px 0;
+      margin: 0 10px;
+      max-width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      p {
+        margin-bottom: 24px;
+      }
+      .btn-link {
+        width: 100%;
+        max-width: 280px;
+      }
     }
   }
 `;
@@ -140,5 +166,23 @@ const LifeStyled = styled.div`
     font-family: var(--inter);
     font-size: 16px;
     padding: 22px 0;
+  }
+  @media screen and (max-width: 900px) {
+    h3 {
+      font-size: 16px;
+    }
+    .img-wrapper {
+      flex-direction: column;
+      gap: 38px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    .btn-link {
+      max-width: 100%;
+      font-size: 12px;
+      padding: 16px;
+    }
   }
 `;

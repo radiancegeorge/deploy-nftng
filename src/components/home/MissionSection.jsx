@@ -62,19 +62,21 @@ const MissionSection = () => {
 export default MissionSection;
 
 const Container = styled.div`
-  padding: 0 15px;
+  padding: 60px 154px;
+
   text-align: center;
   min-height: 100%;
-
   h2 {
-    font-size: 24px;
+    margin: 34px 0;
     color: white;
     margin: 15px 0;
   }
-  @media screen and (min-width: 900px) {
-    padding: 60px 154px;
+
+  @media screen and (max-width: 900px) {
+    padding: 60px 20px 30px;
     h2 {
-      margin: 34px 0;
+      font-size: 16px;
+      margin: 26px 0;
     }
   }
 `;
@@ -139,6 +141,42 @@ const Wrapper = styled.div`
       }
     }
   }
-  @media screen and (min-width: 900px) {
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    .wrap:nth-child(4),
+    .wrap:nth-child(3) {
+      img {
+        width: 240px;
+        z-index: 1;
+        height: 290px;
+      }
+    }
+
+    .wrap {
+      height: 400px;
+      padding: 22px 30px;
+      img {
+        width: 210px;
+        height: 280px;
+      }
+      .desc {
+        h3 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .wrap:nth-child(odd) {
+      background-color: black;
+    }
+    .wrap:nth-child(even) {
+      background-color: rgba(161, 210, 131, 0.1);
+    }
   }
 `;

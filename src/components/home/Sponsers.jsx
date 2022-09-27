@@ -31,4 +31,10 @@ const Wrapper = styled.div`
     width: 80px;
     height: 80px;
   }
+  @media screen and (max-width: 900px) {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;

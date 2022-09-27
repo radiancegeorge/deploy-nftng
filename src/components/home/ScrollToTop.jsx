@@ -16,7 +16,7 @@ export default ScrollToTop;
 
 const Container = styled.div`
   cursor: pointer;
-  position: sticky;
+  position: absolute;
   z-index: 20px;
   width: 65px;
   height: 65px;
