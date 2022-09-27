@@ -93,10 +93,17 @@ const Container = styled.div`
   position: relative;
   padding: 0 120px;
   margin-bottom: 120px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
 `;
 
 const Wrapper = styled.div`
   padding-right: 15vw;
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
 `;
 
 const Wrap = styled.div`
@@ -139,6 +146,25 @@ const Wrap = styled.div`
     line-height: 27px;
     word-spacing: 2px;
   }
+  @media screen and (max-width: 900px) {
+    padding: 38px 20px 20px;
+    margin-bottom: 28px;
+    .about-header {
+      img {
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 `;
 
 const TeamWrapper = styled.div`
@@ -147,6 +173,7 @@ const TeamWrapper = styled.div`
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
+  width: 100%;
   h2 {
     color: #fff;
   }
@@ -208,6 +235,16 @@ const GridWrapper = styled.div`
     .role {
       font-size: 9px;
       font-weight: 400;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    .wrap {
+      flex-shrink: 0;
+      width: 200px;
+      height: 280px;
     }
   }
 `;
