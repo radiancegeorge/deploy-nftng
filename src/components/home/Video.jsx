@@ -40,4 +40,11 @@ const Container = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  @media screen and (max-width: 900px) {
+    margin: 40px 20px 0;
+    height: 250px;
+    .btn-link {
+      font-size: 10px;
+    }
+  }
 `;

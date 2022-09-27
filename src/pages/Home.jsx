@@ -20,8 +20,8 @@ const Home = () => {
       <LifeStyle />
       <FaqSection />
       <Sponsers />
-      <Footer />
       <ScrollToTop />
+      <Footer />
     </Container>
   );
 };
@@ -29,7 +29,7 @@ const Home = () => {
 export default Home;
 
 export const Container = styled.section`
-  padding-top: 65px;
+  padding: 65px 0;
   position: relative;
   color: var(--primary-color);
   width: 100%;

@@ -28,7 +28,7 @@ const Container = styled.div`
   width: 100%;
   padding: 70px 0 40px;
   @media screen and (max-width: 900px) {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 `;
 
@@ -57,9 +57,13 @@ const Wrapper = styled.div`
     }
   }
   @media screen and (max-width: 900px) {
+    padding: 0 20px;
+    width: 100%;
+    align-items: center;
     button,
     .btn-link {
       font-size: 12px;
+      width: 100%;
       img {
         width: 18px;
         height: 18px;

@@ -42,23 +42,50 @@ const Container = styled.div`
   color: white;
   font-family: var(--Branding-sf-medium);
   font-size: 16px;
+  @media screen and (max-width: 900px) {
+    padding: 0 20px;
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   gap: 160px;
+  p,
+  span {
+    font-size: 18px;
+  }
   .social {
     display: flex;
     align-items: center;
     gap: 8px;
+    span {
+      font-family: var(--Branding-sf-bold);
+    }
   }
   .icon {
     display: flex;
     align-items: center;
     gap: 4px;
-    img {
+    a {
       width: 24px;
       height: 24px;
     }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    p,
+    span {
+      font-size: 14px;
+    }
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    padding: 30px 0;
+    width: 100%;
+    background-color: black;
+    gap: 30px;
   }
 `;

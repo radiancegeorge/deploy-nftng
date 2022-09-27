@@ -61,4 +61,18 @@ const Wrapper = styled.div`
       line-height: 24px;
     }
   }
+  @media screen and (max-width: 900px) {
+    .header {
+      h3 {
+        font-size: 12px;
+      }
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    .collapse {
+      font-size: 12px;
+    }
+  }
 `;
