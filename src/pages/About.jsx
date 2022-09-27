@@ -33,4 +33,16 @@ const Contaoner = styled(Container)`
       font-size: 36px;
     }
   }
+  @media screen and (max-width: 900px) {
+    .header {
+      margin-top: 28px;
+      margin-bottom: 28px;
+      padding: 0 20px;
+      text-transform: uppercase;
+      color: white;
+      h1 {
+        font-size: 18px;
+      }
+    }
+  }
 `;
