@@ -5,7 +5,7 @@ const linksData = [
     path: "/",
   },
   {
-    id: 12,
+    id: 2,
     title: "apply",
     path: "/apply",
   },

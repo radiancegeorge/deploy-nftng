@@ -41,7 +41,7 @@ const HomeHeroSection = () => {
           lose!
         </p>
         <Link to="/about" className="btn-link">
-          Learn more about NFT.ng
+          Learn more about NFTNg
         </Link>
         <div className="down">
           <span>Scroll down</span>

@@ -110,7 +110,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 18px;
+  padding: 20px;
   width: 100%;
   background-color: black;
   transition: padding 0.3s ease-in-out;
