@@ -68,6 +68,9 @@ const LeftWrapper = styled.div`
 `;
 
 const LeftWrap = styled.div`
+  .see-more {
+    border-bottom: 1px solid var(--primary-color);
+  }
   a {
     color: var(--primary-color);
     text-decoration: none;
