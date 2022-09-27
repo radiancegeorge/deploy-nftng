@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import linksData from "../data/navLinksData";
 import styled from "styled-components";
 import ToggleLink from "./ToggleLink";
 import logo from "../img/logo.png";
 import { useWindowSize } from "../utils/useWindowSize";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
   const [links, setLinks] = useState(linksData || []);
+
+  const path = useLocation().pathname;
 
   const width = useWindowSize().width;
 
@@ -26,8 +28,11 @@ const Nav = () => {
     setToggle(!toggle);
   };
 
+  useEffect(() => {
+    setToggle(false);
+  }, [path]);
   return (
-    <NavStyled>
+    <NavStyled toggle={toggle}>
       <Container>
         <Wrapper className={toggle ? "active" : null}>
           <Link to="/">
@@ -84,9 +89,13 @@ const NavStyled = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  height: fit-content;
   background-color: black;
   font-family: var(--Branding-sf-medium);
   z-index: 100;
+  @media screen and (max-width: 900px) {
+    height: ${(p) => (p.toggle ? "100vh" : "fit-content")};
+  }
 `;
 
 const Container = styled.div`
@@ -170,15 +179,19 @@ const BurgerMenu = styled.div`
 
 const LinksWrappper = styled.ul`
   width: 100%;
+
   a {
     color: white;
   }
+  margin-top: 60px;
+
   @media screen and (min-width: 900px) {
     display: flex;
     width: fit-content;
     justify-content: space-between;
     gap: 30px;
     align-items: center;
+    margin: 0;
   }
 `;
 
