@@ -104,19 +104,19 @@ export const speakers = [
     twitter: "https://twitter.com/i3uuve1?s=11&t=Y4JxGKKKzroHM31X0hYWBA",
   },
   {
-    id: 7,
+    id: 8,
     img: `${tytan}`,
     name: "Tytan Blackyard",
     twitter: "https://twitter.com/tytaninc?s=21&t=Hi9bUOMxnwcRYLd9X8hUrg",
   },
   {
-    id: 8,
+    id: 9,
     img: `${shodipo}`,
     name: "Shodipo Ayomide",
     twitter: "https://twitter.com/developerayo?s=11&t=Y4JxGKKKzroHM31X0hYWBA",
   },
   {
-    id: 9,
+    id: 10,
     img: `${chika}`,
     name: "Chika Uwazie",
     twitter: "https://twitter.com/chikauwazie?s=11&t=Y4JxGKKKzroHM31X0hYWBA",

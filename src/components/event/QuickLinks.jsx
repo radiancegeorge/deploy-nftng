@@ -96,4 +96,7 @@ const Container = styled.div`
     font-family: var(--Branding-sf-medium);
     cursor: pointer;
   }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;

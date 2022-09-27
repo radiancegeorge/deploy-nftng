@@ -61,6 +61,10 @@ const Container = styled.div`
   position: relative;
   padding: 0 12vw;
   margin-bottom: 150px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
 `;
 
 const Wrapper = styled.div``;
@@ -116,5 +120,29 @@ const Wrap = styled.div`
     width: 100%;
     max-width: 220px;
     border-radius: 8px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 38px 20px 20px;
+    margin-bottom: 28px;
+    .apply-header {
+      img {
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .btn-link {
+      max-width: 100%;
+      border-radius: 0;
+    }
   }
 `;
