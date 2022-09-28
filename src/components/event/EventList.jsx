@@ -452,7 +452,7 @@ const GridImage = styled.div`
       background-color: black;
       overflow: hidden;
       border-radius: 50%;
-      border: 5px solid var(--primary-color);
+      border: 2.5px solid var(--primary-color);
     }
   }
 `;

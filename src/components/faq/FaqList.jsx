@@ -25,6 +25,10 @@ const Container = styled.div`
   position: relative;
   padding: 0 7vw;
   margin-bottom: 120px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -32,6 +36,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 34px;
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
 `;
 
 const Wrap = styled.div`
@@ -44,5 +51,14 @@ const Wrap = styled.div`
     color: #ffffff;
     max-width: 860px;
     font-family: var(--Branding-sf-light);
+  }
+  @media screen and (max-width: 900px) {
+    h2,
+    p {
+      font-size: 12px;
+    }
+    h2 {
+      margin-bottom: 6px;
+    }
   }
 `;

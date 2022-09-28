@@ -59,4 +59,7 @@ const Container = styled.div`
       color: var(--primary-color);
     }
   }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;

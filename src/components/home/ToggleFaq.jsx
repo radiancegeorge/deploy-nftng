@@ -72,6 +72,7 @@ const Wrapper = styled.div`
       }
     }
     .collapse {
+      margin-top: 14px;
       font-size: 12px;
     }
   }

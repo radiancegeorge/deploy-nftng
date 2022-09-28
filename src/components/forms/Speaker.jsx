@@ -133,10 +133,10 @@ const Speaker = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    No, I’m apply for someone
+                    No, I’m applying for someone
                   </a>
                 ) : (
-                  "No, I’m apply for someone"
+                  "No, I’m applying for someone"
                 )}
               </button>
             </RightWrap>
