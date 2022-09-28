@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.04d7ac15.js",
+    "main.js": "/static/js/main.f07210eb.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.846b3c948d1606a85f58.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
     "static/media/nft9.jpeg": "/static/media/nft9.cbd3953cfff55dd170e0.jpeg",
     "static/media/nft8.jpeg": "/static/media/nft8.00f042f403500b85cb7e.jpeg",
     "static/media/map.png": "/static/media/map.3efee6125da6882eb146.png",
+    "static/media/chika.jpeg": "/static/media/chika.6f9a03b7d151845feeb5.jpeg",
     "static/media/nft10.jpeg": "/static/media/nft10.f1775fede75ef2b1c3b5.jpeg",
     "static/media/yemis.jpeg": "/static/media/yemis.a949128ec05192bfe333.jpeg",
     "static/media/nft12.jpeg": "/static/media/nft12.dc92ee3b55684303df49.jpeg",
@@ -67,7 +68,6 @@
     "static/media/desmond.jpeg": "/static/media/desmond.7da08c8db0c8fd1161ba.jpeg",
     "static/media/nft-partner6.jpg": "/static/media/nft-partner6.ec1cc8fd11ff1ebdd3b1.jpg",
     "static/media/havers.jpeg": "/static/media/havers.4377023da67b518e054e.jpeg",
-    "static/media/chika.jpeg": "/static/media/chika.6a8fb002bbd84da19388.jpeg",
     "static/media/sponsers.png": "/static/media/sponsers.e9ff15d285097e1e885b.png",
     "static/media/partner1.jpeg": "/static/media/partner1.7e8108b6094dd3ecb415.jpeg",
     "static/media/obiyor.jpeg": "/static/media/obiyor.eb0c4c2320a88cef24a4.jpeg",
@@ -99,10 +99,10 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.04d7ac15.js.map": "/static/js/main.04d7ac15.js.map"
+    "main.f07210eb.js.map": "/static/js/main.f07210eb.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.04d7ac15.js"
+    "static/js/main.f07210eb.js"
   ]
 }
