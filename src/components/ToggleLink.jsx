@@ -13,6 +13,8 @@ const ToggleLink = ({ title, links, handleToggle, id }) => {
           className={
             path === "/" && title === "home"
               ? "active-toggle"
+              : path === "/contact" && title === "contact us"
+              ? "active-toggle"
               : path.includes(title)
               ? "active-toggle"
               : null

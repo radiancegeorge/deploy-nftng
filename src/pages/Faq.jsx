@@ -11,7 +11,7 @@ const Faq = () => {
   const navigate = useNavigate();
   return (
     <FaqStyled>
-      <div className="back" onClick={() => navigate(-1)}>
+      <div className="back" onClick={() => navigate("/")}>
         <img src={arrow} alt="" />
         <p>Back</p>
       </div>

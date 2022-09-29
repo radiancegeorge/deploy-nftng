@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.f07210eb.js",
+    "main.js": "/static/js/main.912dc696.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.846b3c948d1606a85f58.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -18,6 +18,7 @@
     "static/media/BrandingSF-Bold.ttf": "/static/media/BrandingSF-Bold.a61199b641280c29c470.ttf",
     "static/media/BrandingSF-Light.ttf": "/static/media/BrandingSF-Light.0bb3c1c6f5a3a2b0c2c2.ttf",
     "static/media/BrandingSF-Medium.ttf": "/static/media/BrandingSF-Medium.adccef0c0c7526983334.ttf",
+    "static/media/nft13.jpeg": "/static/media/nft13.97955f1e5b30efb64568.jpeg",
     "static/media/nft-partner5.jpg": "/static/media/nft-partner5.80a619751aa951174a01.jpg",
     "static/media/urbanplug.jpeg": "/static/media/urbanplug.a2069e105acdb5a121b7.jpeg",
     "static/media/tokyo.jpeg": "/static/media/tokyo.3f831fb0dee0c5732d6f.jpeg",
@@ -99,10 +100,10 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.f07210eb.js.map": "/static/js/main.f07210eb.js.map"
+    "main.912dc696.js.map": "/static/js/main.912dc696.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.f07210eb.js"
+    "static/js/main.912dc696.js"
   ]
 }

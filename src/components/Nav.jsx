@@ -115,7 +115,7 @@ const Wrapper = styled.div`
   background-color: black;
   transition: padding 0.3s ease-in-out;
   img {
-    width: 60px;
+    width: 50px;
   }
 
   .nav-btn {
@@ -134,7 +134,7 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 900px) {
-    padding: 24px 5vw;
+    padding: 18px 5vw;
     img {
       width: 96px;
     }
