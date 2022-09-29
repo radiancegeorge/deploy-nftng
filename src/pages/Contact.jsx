@@ -24,7 +24,6 @@ const Contact = () => {
       <Wrapper>
         <Wrap>
           <h1>Contact us</h1>
-          <p>For inquiries, kindly fill this form</p>
           <Form>
             <input
               type="text"
@@ -73,8 +72,7 @@ const Contact = () => {
 export default Contact;
 
 const Container = styled.div`
-  padding: 90px 120px 8vh;
-  overflow: hidden;
+  padding: 70px 120px 8vh;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -93,6 +91,10 @@ const Container = styled.div`
     cursor: pointer;
     font-family: var(--Branding-sf-medium);
   }
+  @media screen and (max-width: 900px) {
+    padding: 10px 20px 100px;
+    height: fit-content;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -101,58 +103,41 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  p {
-    font-size: 14px;
-    margin: 3px 0 20px;
-    font-family: var(--Branding-sf-light);
-    line-height: 25px;
+
+  @media screen and (max-width: 900px) {
+    width: fit-content;
+    height: fit-content;
+    padding: 10vh 0 2vh;
   }
 `;
 
 const Wrap = styled.div`
+  background-color: black;
+  padding: 5vh;
   width: 100%;
   max-width: 570px;
   height: fit-content;
   margin: 0 auto;
   h1 {
     font-size: 24px;
+    margin-bottom: 20px;
     color: var(--primary-color);
     text-transform: uppercase;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 20px;
+    h1 {
+      font-size: 18px;
+    }
   }
 `;
 
 const Form = styled.form`
-  .name {
-    display: flex;
-    gap: 12px;
-  }
-
-  .number {
-    display: flex;
-    align-items: center;
-    border: ${(p) =>
-      p.inputFocus
-        ? "1px solid rgba(185, 243, 149, 0.6)"
-        : "1px solid rgba(161, 210, 131, 0.34)"};
-    height: fit-content;
-    margin-bottom: 12px;
-    padding: 0 9px;
-    border-radius: 6px;
-    transition: all 0.3s ease-in;
-    span {
-      display: inline-block;
-      font-size: 16px;
-      font-family: var(--Branding-sf-medium);
-    }
-    input {
-      border: none;
-      margin: 0;
-    }
-  }
   input,
   textarea {
     padding: 10px;
     font-size: 14px;
+    background-color: black;
     margin-bottom: 12px;
     border-radius: 6px;
     &::placeholder {
@@ -160,7 +145,7 @@ const Form = styled.form`
     }
   }
   textarea {
-    height: 175px;
+    height: 20vh;
   }
   a {
     color: black;
@@ -171,5 +156,19 @@ const Form = styled.form`
     padding: 12px 0;
     font-size: 14px;
     float: right;
+  }
+  @media screen and (max-width: 900px) {
+    textarea,
+    input {
+      font-size: 12px;
+      padding: 14px 8px;
+      margin-bottom: 14px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    button {
+      width: 100%;
+    }
   }
 `;

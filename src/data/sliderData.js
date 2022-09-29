@@ -10,6 +10,7 @@ import nft9 from "../img/slider/nft9.jpeg";
 import nft10 from "../img/slider/nft10.jpeg";
 import nft11 from "../img/slider/nft11.jpeg";
 import nft12 from "../img/slider/nft12.jpeg";
+import nft13 from "../img/slider/nft13.jpeg";
 
 export const img = [
   { id: 1, img: `${nft1}` },
@@ -24,4 +25,5 @@ export const img = [
   { id: 10, img: `${nft10}` },
   { id: 11, img: `${nft11}` },
   { id: 12, img: `${nft12}` },
+  { id: 13, img: `${nft13}` },
 ];
