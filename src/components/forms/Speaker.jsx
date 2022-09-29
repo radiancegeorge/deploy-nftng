@@ -169,6 +169,14 @@ const Container = styled.div`
     font-family: var(--Branding-sf-medium);
     cursor: pointer;
   }
+  @media screen and (max-width: 900px) {
+    padding: 140px 20px 100px;
+    height: fit-content;
+    .back {
+      top: 10vh;
+      left: 20px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -184,6 +192,14 @@ const Wrapper = styled.div`
     font-family: var(--Branding-sf-light);
     line-height: 25px;
   }
+  @media screen and (max-width: 900px) {
+    padding: 0;
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
 `;
 
 const Wrap = styled.div`
@@ -197,6 +213,9 @@ const Wrap = styled.div`
       font-size: 18px;
       font-family: var(--Branding-sf-light);
     }
+  }
+  @media screen and (max-width: 900px) {
+    max-width: 100%;
   }
 `;
 
@@ -237,6 +256,21 @@ const Form = styled.form`
       opacity: 0.4;
     }
   }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 0;
+
+    input,
+    textarea {
+      font-size: 12px;
+      padding: 14px 8px;
+      margin-bottom: 14px;
+      border-radius: 0;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
 `;
 
 const LeftWrap = styled.div`
@@ -271,6 +305,12 @@ const LeftWrap = styled.div`
       margin: 0;
     }
   }
+  @media screen and (max-width: 900px) {
+    .name,
+    .number {
+      border-radius: 0;
+    }
+  }
 `;
 
 const RightWrap = styled.div`
@@ -278,5 +318,10 @@ const RightWrap = styled.div`
 
   textarea {
     height: 80px;
+  }
+  @media screen and (max-width: 900px) {
+    textarea {
+      height: 120px;
+    }
   }
 `;

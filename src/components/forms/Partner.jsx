@@ -132,6 +132,15 @@ const Container = styled.div`
     cursor: pointer;
     font-family: var(--Branding-sf-medium);
   }
+
+  @media screen and (max-width: 900px) {
+    padding: 140px 20px 100px;
+    height: fit-content;
+    .back {
+      top: 10vh;
+      left: 20px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -207,5 +216,20 @@ const Form = styled.form`
     border-radius: 6px;
     padding: 12px 0;
     font-size: 18px;
+  }
+
+  @media screen and (max-width: 900px) {
+    input {
+      font-size: 12px;
+      padding: 14px 8px;
+      margin-bottom: 14px;
+      border-radius: 0;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    button {
+      width: 100%;
+    }
   }
 `;
