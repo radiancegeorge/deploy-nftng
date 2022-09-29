@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.c54295f1.js",
+    "main.js": "/static/js/main.b12345bc.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.9c575e80443d925dcb53.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -53,6 +53,7 @@
     "static/media/olalere.jpeg": "/static/media/olalere.e3bacfb9e29ee55c2132.jpeg",
     "static/media/Kwame AA Opoku.jpg": "/static/media/Kwame AA Opoku.7ab0b3ae313bc69e24c0.jpg",
     "static/media/celebration1.svg": "/static/media/celebration1.a887ae5bd95f2768392b1a162618131d.svg",
+    "static/media/Mr Khatanbuuvei.jpeg": "/static/media/Mr Khatanbuuvei.a0c47c9678a9d77658ef.jpeg",
     "static/media/momoh.jpg": "/static/media/momoh.c155d252f4709547a90b.jpg",
     "static/media/Bitcoin keith.jpg": "/static/media/Bitcoin keith.bef74c12a26b8a2cef4c.jpg",
     "static/media/Big Os.jpeg": "/static/media/Big Os.f85fa51cc5002ec2aa3b.jpeg",
@@ -62,7 +63,6 @@
     "static/media/mission-4.svg": "/static/media/mission-4.ee74a25314ab2b56d54eee8e38075aa9.svg",
     "static/media/juliet.jpeg": "/static/media/juliet.1641eb934ec85aad2a43.jpeg",
     "static/media/nft1.jpeg": "/static/media/nft1.963753c4d2470301c2ac.jpeg",
-    "static/media/Mr Khatanbuuvei.jpg": "/static/media/Mr Khatanbuuvei.c354956d0252447d17b6.jpg",
     "static/media/christiane.jpeg": "/static/media/christiane.c7fa9bd87324391f5591.jpeg",
     "static/media/mission-1.svg": "/static/media/mission-1.6b2c0b794a85a033540864eb2179c9d4.svg",
     "static/media/nft-partner8.jpg": "/static/media/nft-partner8.dcb1de39079c71e1660c.jpg",
@@ -100,10 +100,10 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.c54295f1.js.map": "/static/js/main.c54295f1.js.map"
+    "main.b12345bc.js.map": "/static/js/main.b12345bc.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.c54295f1.js"
+    "static/js/main.b12345bc.js"
   ]
 }

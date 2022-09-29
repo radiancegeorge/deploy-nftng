@@ -155,6 +155,12 @@ const Wrapper = styled.div`
     font-family: var(--Branding-sf-light);
     line-height: 25px;
   }
+  @media screen and (max-width: 900px) {
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
 `;
 
 const Wrap = styled.div`

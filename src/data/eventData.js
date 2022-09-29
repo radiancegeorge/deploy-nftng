@@ -12,7 +12,7 @@ import Cross from "../img/speakers/Cross Okonkwo.jpg";
 import Bello from "../img/speakers/Korede Bello.jpg";
 import opoku from "../img/speakers/Kwame AA Opoku.jpg";
 import elisha from "../img/speakers/Elisha Owusu.jpg";
-import khatanbuuvei from "../img/speakers/Mr Khatanbuuvei.jpg";
+import khatanbuuvei from "../img/speakers/Mr Khatanbuuvei.jpeg";
 import tytan from "../img/speakers/tytan.jpeg";
 import chika from "../img/speakers/chika.jpeg";
 import shodipo from "../img/speakers/shodipo.jpeg";

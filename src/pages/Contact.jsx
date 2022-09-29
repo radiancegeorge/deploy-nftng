@@ -92,7 +92,7 @@ const Container = styled.div`
     font-family: var(--Branding-sf-medium);
   }
   @media screen and (max-width: 900px) {
-    padding: 10px 20px 100px;
+    padding: 10px 0 100px;
     height: fit-content;
   }
 `;
@@ -107,7 +107,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 900px) {
     width: fit-content;
     height: fit-content;
-    padding: 10vh 0 2vh;
+    padding: 10vh 20px 2vh;
   }
 `;
 
