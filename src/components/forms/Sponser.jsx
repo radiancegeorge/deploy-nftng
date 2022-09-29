@@ -132,6 +132,14 @@ const Container = styled.div`
     font-family: var(--Branding-sf-medium);
     cursor: pointer;
   }
+  @media screen and (max-width: 900px) {
+    padding: 140px 20px 100px;
+    height: fit-content;
+    .back {
+      top: 10vh;
+      left: 20px;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
@@ -145,6 +153,12 @@ const Wrapper = styled.div`
     margin: 16px 0;
     font-family: var(--Branding-sf-light);
     line-height: 25px;
+  }
+  @media screen and (max-width: 900px) {
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 `;
 
@@ -206,6 +220,25 @@ const Form = styled.form`
     font-size: 18px;
     a {
       color: black;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    input {
+      font-size: 12px;
+      padding: 14px 8px;
+      margin-bottom: 14px;
+      border-radius: 0;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    button {
+      width: 100%;
+    }
+
+    .number {
+      border-radius: 0;
     }
   }
 `;
