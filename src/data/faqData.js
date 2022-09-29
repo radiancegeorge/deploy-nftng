@@ -8,7 +8,7 @@ export const faqData = [
   {
     id: 2,
     title: "What is NFT_NG Vision?",
-    desc: `To Empower the next sets of builders, creatives, and thought leaders from the African community.`,
+    desc: `Empower the next sets of builders, creatives, and thought leaders from the African community.`,
   },
   {
     id: 3,

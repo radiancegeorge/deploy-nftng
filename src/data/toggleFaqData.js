@@ -9,8 +9,7 @@ export const questionAnswer = [
   {
     id: 2,
     question: "What is NFTNG Vision? ",
-    answer: `The NFTNG Pass is a NFT Pass that gives holders exclusive lifetime access to all NFTNG 
-    events and products.`,
+    answer: `Empower the next sets of builders, creatives, and thought leaders from the African community.`,
     toggle: false,
   },
   {
