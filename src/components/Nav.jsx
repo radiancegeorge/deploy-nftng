@@ -5,6 +5,7 @@ import ToggleLink from "./ToggleLink";
 import logo from "../img/logo.png";
 import { useWindowSize } from "../utils/useWindowSize";
 import { Link, useLocation } from "react-router-dom";
+import close from "../img/svg/green-close-circle.svg";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -42,9 +43,7 @@ const Nav = () => {
             {toggle && (
               <CloseBtn>
                 <p>Close</p>
-                <div className="cross">
-                  <span>x</span>
-                </div>
+                <img src={close} alt="" />
               </CloseBtn>
             )}
             {!toggle && (
@@ -197,22 +196,13 @@ const LinksWrappper = styled.ul`
 
 const CloseBtn = styled.div`
   display: flex;
+  align-items: center;
   gap: 8px;
   p {
     color: var(--primary-color);
   }
-  .cross {
-    border: 1px solid var(--primary-color);
-    border-radius: 50%;
+  img {
     width: 20px;
     height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      display: inline-block;
-      font-size: 12px;
-      color: var(--primary-color);
-    }
   }
 `;
