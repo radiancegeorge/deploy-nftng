@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.b12345bc.js",
+    "main.js": "/static/js/main.fe5c56fc.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.9c575e80443d925dcb53.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -95,15 +95,16 @@
     "static/media/cloth.svg": "/static/media/cloth.a4431e2f99a790d6e6b78dd26ec684a5.svg",
     "static/media/close-circle-white.svg": "/static/media/close-circle-white.7051a85f9e5a7c85af5e5a85fc4fbc80.svg",
     "static/media/flag.svg": "/static/media/flag.f55cc23bd38626f3e251d5ebf4542802.svg",
+    "static/media/green-close-circle.svg": "/static/media/green-close-circle.363fd49a9bbb96478e8986d2d8b20973.svg",
     "static/media/add-circle.svg": "/static/media/add-circle.d612304a0919d0ec7b4578b68043e97f.svg",
     "static/media/subs-circle.svg": "/static/media/subs-circle.7f04578b407372637a91f31dfbb977de.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.b12345bc.js.map": "/static/js/main.b12345bc.js.map"
+    "main.fe5c56fc.js.map": "/static/js/main.fe5c56fc.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.b12345bc.js"
+    "static/js/main.fe5c56fc.js"
   ]
 }
