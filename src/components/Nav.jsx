@@ -36,7 +36,7 @@ const Nav = () => {
     <NavStyled toggle={toggle}>
       <Container>
         <Wrapper className={toggle ? "active" : null}>
-          <Link to="/">
+          <Link to="/" state={{ yes: "yess" }}>
             <img src={logo} alt="logo" />
           </Link>
           <div className="nav-btn" onClick={handleToggle}>
@@ -58,7 +58,10 @@ const Nav = () => {
             <Wrap>
               <LinksWrappper>
                 {links.map((link) => (
-                  <Link to={link.path} key={link.id}>
+                  <Link
+                    to={link.title === "awards" ? "/coming-soon" : link.path}
+                    key={link.id}
+                  >
                     <ToggleLink
                       title={link.title}
                       links={link.links}

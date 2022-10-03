@@ -16,7 +16,7 @@ const Merch = ({ image, data, onAdd, checkAvailability }) => {
             <p className="name">{data.name}</p>
             <p className="price">${data.price}</p>
           </div>
-          <button>Buy</button>
+          <button>Add to Cart</button>
         </div>
       </Wrapper>
     </Container>
@@ -38,6 +38,9 @@ const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: 900px) {
+    height: 380px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -67,6 +70,10 @@ const Wrapper = styled.div`
   }
   button {
     font-size: 12px;
+    padding: 10px;
+  }
+  @media screen and (max-width: 900px) {
+    height: 380px;
   }
 `;
 

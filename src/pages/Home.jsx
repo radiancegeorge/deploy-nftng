@@ -8,6 +8,7 @@ import FaqSection from "../components/home/FaqSection";
 import Sponsers from "../components/home/Sponsers";
 import Footer from "../components/Footer";
 import styled from "styled-components";
+// import ConnectWallet from "../components/wallet/ConnectWallet";
 import ScrollToTop from "../components/home/ScrollToTop";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <Sponsers />
       <ScrollToTop />
       <Footer />
+      {/* <ConnectWallet /> */}
     </Container>
   );
 };

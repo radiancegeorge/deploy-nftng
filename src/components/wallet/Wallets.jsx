@@ -1,65 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import close from "../img/svg/green-close-circle.svg";
-import metamask from "../img/wallet/metamask.png";
-import walletConnect from "../img/wallet/WalletConnect.png";
-import trezor from "../img/wallet/Bitcoin Trezor.png";
-import coinbase from "../img/wallet/coinbase.png";
+import close from "../../img/svg/green-close-circle.svg";
+import metamask from "../../img/wallet/metamask.png";
+import walletConnect from "../../img/wallet/WalletConnect.png";
+import trezor from "../../img/wallet/Bitcoin Trezor.png";
+import coinbase from "../../img/wallet/coinbase.png";
 
-const ConnectWallet = () => {
+const Wallets = () => {
   return (
-    <Container>
-      <Wrapper>
-        <div className="header">
-          <p>Connect Wallet</p>
-          <img src={close} alt="" />
+    <Wrapper>
+      <div className="header">
+        <p>Connect Wallet</p>
+        <img src={close} alt="" />
+      </div>
+      <Grid>
+        <div className="wrap">
+          <img src={metamask} alt="" />
+          <p>Metamask</p>
         </div>
-        <Grid>
-          <div className="wrap">
-            <img src={metamask} alt="" />
-            <p>Metamask</p>
-          </div>
-          <div className="wrap">
-            <img src={walletConnect} alt="" />
-            <p>WalletConnect</p>
-          </div>
-          <div className="wrap">
-            <img src={trezor} alt="" />
-            <p>Trezor</p>
-          </div>
-          <div className="wrap">
-            <img src={coinbase} alt="" />
-            <p>Coinbase Wallet</p>
-          </div>
-        </Grid>
-      </Wrapper>
-    </Container>
+        <div className="wrap">
+          <img src={walletConnect} alt="" />
+          <p>WalletConnect</p>
+        </div>
+        <div className="wrap">
+          <img src={trezor} alt="" />
+          <p>Trezor</p>
+        </div>
+        <div className="wrap">
+          <img src={coinbase} alt="" />
+          <p>Coinbase Wallet</p>
+        </div>
+      </Grid>
+    </Wrapper>
   );
 };
 
-export default ConnectWallet;
-
-const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--inter);
-
-  @media screen and (max-width: 900px) {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    background: #252525;
-    padding: 0 15px 60px;
-  }
-`;
+export default Wallets;
 
 const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.6);

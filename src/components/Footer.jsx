@@ -42,6 +42,7 @@ const Container = styled.div`
   color: white;
   font-family: var(--Branding-sf-medium);
   font-size: 16px;
+  width: 100%;
   @media screen and (max-width: 900px) {
     padding: 0 20px;
   }
