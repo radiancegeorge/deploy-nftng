@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.fe5c56fc.js",
+    "main.js": "/static/js/main.e825215b.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.9c575e80443d925dcb53.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -45,6 +45,7 @@
     "static/media/nft-partner1.jpeg": "/static/media/nft-partner1.df7b4713116e0f0ef3fb.jpeg",
     "static/media/debbie.jpeg": "/static/media/debbie.f4df6dedbf75e5efc5f6.jpeg",
     "static/media/nft6.jpeg": "/static/media/nft6.c211276f5c395dc3c2fc.jpeg",
+    "static/media/coming-soon.svg": "/static/media/coming-soon.3185d5bd76d3063a2ea400f13d6548cc.svg",
     "static/media/tytan.jpeg": "/static/media/tytan.efc49f73b0ac369a4961.jpeg",
     "static/media/Cross Okonkwo.jpg": "/static/media/Cross Okonkwo.365ff34cc2293498b036.jpg",
     "static/media/nft5.jpeg": "/static/media/nft5.0d4b0492cc298f0d83d2.jpeg",
@@ -55,11 +56,13 @@
     "static/media/celebration1.svg": "/static/media/celebration1.a887ae5bd95f2768392b1a162618131d.svg",
     "static/media/Mr Khatanbuuvei.jpeg": "/static/media/Mr Khatanbuuvei.a0c47c9678a9d77658ef.jpeg",
     "static/media/momoh.jpg": "/static/media/momoh.c155d252f4709547a90b.jpg",
+    "static/media/not-found.svg": "/static/media/not-found.e8276bb973e4bd3787d2828aa4eb92c8.svg",
     "static/media/Bitcoin keith.jpg": "/static/media/Bitcoin keith.bef74c12a26b8a2cef4c.jpg",
     "static/media/Big Os.jpeg": "/static/media/Big Os.f85fa51cc5002ec2aa3b.jpeg",
     "static/media/nft-partner3.jpg": "/static/media/nft-partner3.073d1afed2bdbdddc299.jpg",
     "static/media/mission-3.svg": "/static/media/mission-3.d98c40e9536333f40b48969a55e74602.svg",
     "static/media/Anthony Azekwoh.jpg": "/static/media/Anthony Azekwoh.7f876d8ef8bc4ac6e3a8.jpg",
+    "static/media/opp-buzz.svg": "/static/media/opp-buzz.0b501e7318f8db73496a48cb7d77ad97.svg",
     "static/media/mission-4.svg": "/static/media/mission-4.ee74a25314ab2b56d54eee8e38075aa9.svg",
     "static/media/juliet.jpeg": "/static/media/juliet.1641eb934ec85aad2a43.jpeg",
     "static/media/nft1.jpeg": "/static/media/nft1.963753c4d2470301c2ac.jpeg",
@@ -93,7 +96,6 @@
     "static/media/crown.svg": "/static/media/crown.4fd3b41ca1b4cc7acb6206432bd9bf7d.svg",
     "static/media/orange.svg": "/static/media/orange.dca36455b915c052614270f4238d7e4e.svg",
     "static/media/cloth.svg": "/static/media/cloth.a4431e2f99a790d6e6b78dd26ec684a5.svg",
-    "static/media/close-circle-white.svg": "/static/media/close-circle-white.7051a85f9e5a7c85af5e5a85fc4fbc80.svg",
     "static/media/flag.svg": "/static/media/flag.f55cc23bd38626f3e251d5ebf4542802.svg",
     "static/media/green-close-circle.svg": "/static/media/green-close-circle.363fd49a9bbb96478e8986d2d8b20973.svg",
     "static/media/add-circle.svg": "/static/media/add-circle.d612304a0919d0ec7b4578b68043e97f.svg",
@@ -101,10 +103,10 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.fe5c56fc.js.map": "/static/js/main.fe5c56fc.js.map"
+    "main.e825215b.js.map": "/static/js/main.e825215b.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.fe5c56fc.js"
+    "static/js/main.e825215b.js"
   ]
 }
