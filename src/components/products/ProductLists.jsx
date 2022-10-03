@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import cloth from "../../img/svg/cloth.svg";
 import money from "../../img/svg/money.svg";
 import { Link } from "react-router-dom";
-import GetPass from "../products/GetPass";
 
 const ProductLists = () => {
-  const [togglePass, setTogglePass] = useState(false);
-
   return (
     <>
-      {togglePass && <GetPass setTogglePass={setTogglePass} />}
       <Container>
         <Wrapper>
           <Wrap id="sponsor">
@@ -27,7 +23,7 @@ const ProductLists = () => {
               Communities. Holders of the NFTNG pass get early priority access
               to the merchandise at discounted prices.
             </p>
-            <Link to="/comingsoon" className="btn-link">
+            <Link to="/coming-soon" className="btn-link">
               Get merch
             </Link>
           </Wrap>
@@ -45,7 +41,7 @@ const ProductLists = () => {
               Furthermore, it affords holders early access to other
               products/utilities by the NFTNG team.
             </p>
-            <Link to="/comingsoon" className="btn-link">
+            <Link to="/coming-soon" className="btn-link">
               Get pass
             </Link>
           </Wrap>

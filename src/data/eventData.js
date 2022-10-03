@@ -6,6 +6,7 @@ import ntfPartner5 from "../img/nft-partners/nft-partner5.jpg";
 import ntfPartner6 from "../img/nft-partners/nft-partner6.jpg";
 import ntfPartner7 from "../img/nft-partners/nft-partner7.jpg";
 import ntfPartner8 from "../img/nft-partners/nft-partner8.jpg";
+import ntfPartner9 from "../img/nft-partners/nft-partner9.jpg";
 import anthony from "../img/speakers/Anthony Azekwoh.jpg";
 import keith from "../img/speakers/Bitcoin keith.jpg";
 import Cross from "../img/speakers/Cross Okonkwo.jpg";
@@ -57,6 +58,11 @@ export const ntfPartner = [
     id: 8,
     img: `${ntfPartner8}`,
     twitter: "https://twitter.com/fatcatscapital?s=11&t=yHXuD72IfmSNfkeoAfnlug",
+  },
+  {
+    id: 9,
+    img: `${ntfPartner9}`,
+    twitter: "https://twitter.com/theplaguenft?s=11&t=w8jAoomq-aKVeWv4PGhFOw",
   },
 ];
 

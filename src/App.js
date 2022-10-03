@@ -15,8 +15,8 @@ import MerchandiseSection from "./components/products/MerchandiseSection";
 import Faq from "./pages/Faq";
 import Event from "./pages/Event";
 import Contact from "./pages/Contact";
-import ComingSoon from "./pages/ComingSoon";
 import Awards from "./pages/Awards";
+import Error from "./pages/Error";
 
 function App() {
   const { pathname } = useLocation();
@@ -45,8 +45,8 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/event" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/awards" element={<Awards />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </main>
   );

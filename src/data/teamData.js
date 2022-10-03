@@ -16,6 +16,7 @@ import christiane from "../img/christiane.jpeg";
 import desmond from "../img/desmond.jpeg";
 import juliet from "../img/juliet.jpeg";
 import obiyor from "../img/obiyor.jpeg";
+import nelson from "../img/nelson.jpg";
 
 export const coreTeam = [
   {
@@ -147,5 +148,12 @@ export const otherTeam = [
     role: "Collab team",
     img: `${obiyor}`,
     social: "https://twitter.com/demitchy_",
+  },
+  {
+    id: 15,
+    name: "Nelson Mojolaoluwa",
+    role: "UI/UX designer",
+    img: `${nelson}`,
+    social: "https://twitter.com/mistamojolarh",
   },
 ];

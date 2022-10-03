@@ -3,49 +3,32 @@ import styled from "styled-components";
 import opensea from "../../img/openseas.png";
 import close from "../../img/svg/close-circle-white.svg";
 
-const GetPass = ({ setTogglePass }) => {
+const GetPass = () => {
   return (
-    <Container>
-      <Wrapper>
-        <div className="top">
-          <p>Get NFTPass Here</p>
-          <img src={close} alt="" onClick={() => setTogglePass(false)} />
-        </div>
-        <div className="opensea">
-          <img src={opensea} alt="" />
-        </div>
-      </Wrapper>
-    </Container>
+    <Wrapper>
+      <div className="top">
+        <p>NFTPass Here</p>
+        <img src={close} alt="" />
+      </div>
+      <div className="opensea">
+        <img src={opensea} alt="" />
+      </div>
+    </Wrapper>
   );
 };
 
 export default GetPass;
 
-const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-`;
-
 const Wrapper = styled.div`
   width: 460px;
   height: 320px;
   padding: 34px 28px;
-  border-radius: 40px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--primary-color);
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
   .top {
     width: 100%;
     position: absolute;
@@ -64,6 +47,19 @@ const Wrapper = styled.div`
     }
     img {
       cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    height: 260px;
+    padding: 22px;
+    p {
+      font-size: 14px;
+    }
+    .top {
+    }
+    .opensea {
+      margin-top: 20px;
     }
   }
 `;

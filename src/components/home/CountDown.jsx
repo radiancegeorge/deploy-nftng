@@ -2,18 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import celebration from "../../img/svg/celebration1.svg";
 import { Link } from "react-router-dom";
+import { useCountdown } from "../../utils/useCountdown";
 
 const CountDown = () => {
+  const { days, hours, mins, secs } = useCountdown();
   return (
     <Container>
       <Wrapper>
         <TimeWrap>
           <p>
-            <span className="days">00</span>:<span className="hours">00</span>:
-            <span className="mins">00</span>:<span className="sec">00</span>
+            <span className="days">{days}</span>:
+            <span className="hours">{hours}</span>:
+            <span className="mins">{mins}</span>:
+            <span className="sec">{secs}</span>
           </p>
         </TimeWrap>
-        <Link to="/comingsoon" className="btn-link">
+        <Link to="/coming-soon" className="btn-link">
           Mint NftNg Pass
           <img src={celebration} alt="" />
         </Link>
@@ -43,6 +47,7 @@ const Wrapper = styled.div`
   .btn-link {
     margin-top: 60px;
     font-size: 15px;
+    width: 460px;
     font-family: var(--inter);
     font-weight: 700;
     padding: 20px 0;
@@ -62,6 +67,7 @@ const Wrapper = styled.div`
     align-items: center;
     button,
     .btn-link {
+      margin-top: 40px;
       font-size: 12px;
       width: 100%;
       img {
@@ -74,6 +80,7 @@ const Wrapper = styled.div`
 
 const TimeWrap = styled.div`
   color: white;
+
   p {
     font-size: 64px;
     font-family: var(--inter);

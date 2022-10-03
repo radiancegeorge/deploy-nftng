@@ -184,7 +184,7 @@ const EventList = () => {
             venue of the event at discounted and affordable rates. To request
             for accommodation booking, kindly contact
           </p>
-          <Link to="/comingsoon" className="btn-link">
+          <Link to="/coming-soon" className="btn-link">
             Get accommodation
           </Link>
         </Wrap>
