@@ -9,6 +9,7 @@ const CountDown = () => {
   return (
     <Container>
       <Wrapper>
+        
         <TimeWrap>
           <p>
             <span className="days">{days}</span>:

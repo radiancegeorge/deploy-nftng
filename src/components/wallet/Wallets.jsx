@@ -1,12 +1,98 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import close from "../../img/svg/green-close-circle.svg";
 import metamask from "../../img/wallet/metamask.png";
 import walletConnect from "../../img/wallet/WalletConnect.png";
 import trezor from "../../img/wallet/Bitcoin Trezor.png";
 import coinbase from "../../img/wallet/coinbase.png";
+import WalletConnectProvider from '@walletconnect/web3-provider'
+import Web3 from "web3";
 
 const Wallets = () => {
+  const provider = new WalletConnectProvider({
+    // rpc: {
+    //   '0xfa2': 'https://rpc.testnet.fantom.network',
+    // },
+    // rpc: {
+    //   '0x1' : 'https://mainnet.infura.io/v3/45b5a21bfa5b4429af59109069821ed3'
+    // }
+    // rpc: {
+    //   56: "https://bsc-dataseed1.binance.org",
+    // }
+    // infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+    infuraId: "45b5a21bfa5b4429af59109069821ed3",
+  })
+  const [web3,setWeb3]=useState()
+  const [walletType,setWalletType]=useState()
+  useEffect(()=>{
+  
+  },[])
+  const connectWallet=async()=>{
+    if(walletType==='walletConnect'){
+    
+        try {
+          await provider.enable()
+          console.log("enable", provider)
+          // if (provider.chainId === 1) {
+            console.log("guyyy")
+            session.setItem('currentAccount', provider.accounts[0])
+            setUserInfo({
+              ...userInfo,
+              account: provider.accounts[0],
+              chain: provider.chainId,
+            })
+    
+            try {
+    
+              const user = {
+                params: {
+                  wallet_address: localStorage.getItem('currentAccount'),
+                },
+              }
+             
+              
+           
+              
+              localStorage.setItem("walletType", 'WalletConnect')
+             
+            } catch (err) {
+              console.log(err)
+             
+            }
+          // }
+          //  else {
+          //   // setWalletError('Wrong network, please switch to ethereum mainnet!')
+          // }
+    
+          setWeb3(new Web3(provider))
+          provider.on("connect", (accounts) => {
+            console.log("account?", accounts)
+          })
+          // Subscribe to accounts change
+          provider.on('accountsChanged', (accounts) => {
+            console.log(accounts)
+            localStorage.setItem('currentAccount', accounts[0])
+            // setCurrentAccount(localStorage.getItem('currentAccount'))
+            console.log("account was set>>>", currentAccount)
+          })
+    
+          // Subscribe to chainId change
+          // provider.on('chainChanged', (chainId) => {
+          //   console.log('chainId>>>>', chainId)
+          //   setChain(chainId)
+          //   localStorage.setItem('chain', chainId)
+          // })
+    
+          // Subscribe to session disconnection
+          provider.on('disconnect', (code, reason) => {
+            console.log(code, reason)
+          })
+        } catch (err) {
+          console.log(err)
+        }
+      }
+  
+  }
   return (
     <Wrapper>
       <div className="header">
@@ -14,11 +100,11 @@ const Wallets = () => {
         <img src={close} alt="" />
       </div>
       <Grid>
-        <div className="wrap">
+        <div onClick={()=>setWalletType('window.ethereum')} className="wrap">
           <img src={metamask} alt="" />
           <p>Metamask</p>
         </div>
-        <div className="wrap">
+        <div onClick={()=>setWalletType('walletConnect')} className="wrap">
           <img src={walletConnect} alt="" />
           <p>WalletConnect</p>
         </div>
@@ -26,7 +112,7 @@ const Wallets = () => {
           <img src={trezor} alt="" />
           <p>Trezor</p>
         </div>
-        <div className="wrap">
+        <div onClick={()=>setWalletType('window.coinbaseWalletExtension')} className="wrap">
           <img src={coinbase} alt="" />
           <p>Coinbase Wallet</p>
         </div>

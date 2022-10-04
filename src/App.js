@@ -17,6 +17,7 @@ import Event from "./pages/Event";
 import Contact from "./pages/Contact";
 import Awards from "./pages/Awards";
 import Error from "./pages/Error";
+import ConnectWallet from "./components/wallet/ConnectWallet";
 
 function App() {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wallet" element={<ConnectWallet/>}/>
         <Route path="/apply" element={<Apply />} />
         <Route path="/apply/award" element={<Award />} />
         <Route path="/apply/speaker" element={<Speaker />} />

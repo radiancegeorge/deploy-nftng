@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-// import Wallets from "./Wallets";
+import Wallets from "./Wallets";
 // import SuccessFul from "./SuccessFul";
 // import GetPass from "./GetPass";
-// import Minting from "./Minting";
+import Minting from "./Minting";
 
 const ConnectWallet = () => {
   return (
     <Container>
-      {/* <Wallets /> */}
+      <Wallets />
       {/* <SuccessFul /> */}
       {/* <GetPass /> */}
       {/* <Minting /> */}
