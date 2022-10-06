@@ -7,11 +7,11 @@ import metamask from "../../img/wallet/metamask.png";
 import walletConnect from "../../img/wallet/WalletConnect.png";
 import trezor from "../../img/wallet/Bitcoin Trezor.png";
 import coinbase from "../../img/wallet/coinbase.png";
-import WalletConnectProvider from '@walletconnect/web3-provider'
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3";
-import { useNavigate } from "react-router-dom/dist";
+import { useNavigate } from "react-router-dom";
 
-const Wallets = ({success,closeTab}) => {
+const Wallets = ({ success, closeTab }) => {
   const provider = new WalletConnectProvider({
     // rpc: {
     //   '0xfa2': 'https://rpc.testnet.fantom.network',
@@ -24,79 +24,74 @@ const Wallets = ({success,closeTab}) => {
     // }
     // infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
     infuraId: "45b5a21bfa5b4429af59109069821ed3",
-  })
-  const [web3,setWeb3]=useState()
+  });
+  const [web3, setWeb3] = useState();
   // const []
-  const [walletType,setWalletType]=useState()
-  const {contract}=Contract()
-  const navigate=useNavigate()
-  const connectWithMetamask=async()=>{
-      setWeb3(new Web3(window.ethereum))
-      
+  const [walletType, setWalletType] = useState();
+  const { contract } = Contract();
+  const navigate = useNavigate();
+  const connectWithMetamask = async () => {
+    setWeb3(new Web3(window.ethereum));
+
+    try {
+      const acc = await window.ethereum.enable();
+      console.log(acc);
+      const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call();
+      console.log(isBuzzListed);
+      if (isBuzzListed) {
+        success();
+      } else navigate("/opps-buzz");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const connectWallet = async () => {
+    if (walletType === "walletConnect") {
       try {
-        const acc= await window.ethereum.enable()
-        console.log(acc);
-        const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call()
-        console.log(isBuzzListed);
-        if(isBuzzListed){
-           success()
-        }
-        else navigate('/opps-buzz')
-      } catch (error) {
-        console.log(error);
+        await provider.enable();
+        console.log("enable", provider);
+        // if (provider.chainId === 1) {
+        // console.log("guyyy")
+        sessionStorage.setItem("currentAccount", provider.accounts[0]);
+
+        console.log(contract);
+
+        setWeb3(new Web3(provider));
+        provider.on("connect", (accounts) => {
+          console.log("account?", accounts);
+        });
+        // Subscribe to accounts change
+        provider.on("accountsChanged", (accounts) => {
+          console.log(accounts);
+          sessionStorage.setItem("currentAccount", accounts[0]);
+          // setCurrentAccount(localStorage.getItem('currentAccount'))
+          console.log(
+            "account was set>>>",
+            localStorage.getItem("currentAccount")
+          );
+        });
+
+        // Subscribe to session disconnection
+        provider.on("disconnect", (code, reason) => {
+          console.log(code, reason);
+        });
+      } catch (err) {
+        console.log(err);
       }
-  }
+    }
+    if (walletType === "metamask" || walletType === "coinBase") {
+      // delete window.ethereum
 
+      if (window.ethereum) {
+        connectWithMetamask();
+      } else console.log("Install Metamask");
+    }
+  };
 
-  const connectWallet=async()=>{
-    if(walletType==='walletConnect'){
-    
-        try {
-          await provider.enable()
-          console.log("enable", provider)
-          // if (provider.chainId === 1) {
-            // console.log("guyyy")
-            sessionStorage.setItem('currentAccount', provider.accounts[0])
-            
-            console.log(contract);
-
-           
-    
-          setWeb3(new Web3(provider))
-          provider.on("connect", (accounts) => {
-            console.log("account?", accounts)
-          })
-          // Subscribe to accounts change
-          provider.on('accountsChanged', (accounts) => {
-            console.log(accounts)
-            sessionStorage.setItem('currentAccount', accounts[0])
-            // setCurrentAccount(localStorage.getItem('currentAccount'))
-            console.log("account was set>>>", localStorage.getItem('currentAccount'))
-          })
-    
-       
-          // Subscribe to session disconnection
-          provider.on('disconnect', (code, reason) => {
-            console.log(code, reason)
-          })
-        } catch (err) {
-          console.log(err)
-        }
-      }
-      if(walletType==='metamask'|| walletType==='coinBase'){
-        // delete window.ethereum
-
-        if(window.ethereum){
-           connectWithMetamask()  
-        }
-        else console.log('Install Metamask')
-      }
-  
-  }
-
-  useEffect(()=>{
-     connectWallet()
-  },[walletType])
+  useEffect(() => {
+    connectWallet();
+  }, [walletType]);
 
   return (
     <Wrapper>
@@ -105,11 +100,11 @@ const Wallets = ({success,closeTab}) => {
         <img onClick={closeTab} src={close} alt="" />
       </div>
       <Grid>
-        <div onClick={()=>setWalletType('metamask')} className="wrap">
+        <div onClick={() => setWalletType("metamask")} className="wrap">
           <img src={metamask} alt="" />
           <p>Metamask</p>
         </div>
-        <div onClick={()=>setWalletType('walletConnect')} className="wrap">
+        <div onClick={() => setWalletType("walletConnect")} className="wrap">
           <img src={walletConnect} alt="" />
           <p>WalletConnect</p>
         </div>
@@ -117,7 +112,7 @@ const Wallets = ({success,closeTab}) => {
           <img src={trezor} alt="" />
           <p>Trezor</p>
         </div> */}
-        <div onClick={()=>setWalletType('coinBase')} className="wrap">
+        <div onClick={() => setWalletType("coinBase")} className="wrap">
           <img src={coinbase} alt="" />
           <p>Coinbase Wallet</p>
         </div>
