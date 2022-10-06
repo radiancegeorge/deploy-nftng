@@ -11,7 +11,7 @@ import Volunter from "./components/forms/Volunter";
 import Sponser from "./components/forms/Sponser";
 import Partner from "./components/forms/Partner";
 import Products from "./pages/Products";
-import MerchandiseSection from "./components/products/MerchandiseSection";
+import ProductDetail from "./components/products/ProductDetail";
 import Faq from "./pages/Faq";
 import Event from "./pages/Event";
 import Contact from "./pages/Contact";
@@ -41,7 +41,7 @@ function App() {
         <Route path="/apply/partner" element={<Partner />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products/merchandise" element={<MerchandiseSection />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/event" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
