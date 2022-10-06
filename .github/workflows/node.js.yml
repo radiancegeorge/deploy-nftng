@@ -25,4 +25,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cp -r ./build/* /home/radiance/nftng.com/
+    - run: cp -r ./build/* /home/radiance/dev.nftng.com/
