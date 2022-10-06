@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom/dist";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import celebration1 from "../../img/svg/celebration1.svg";
 import celebration2 from "../../img/svg/celebration2.svg";
