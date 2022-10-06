@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import celebration from "../../img/svg/celebration1.svg";
-import { Link } from "react-router-dom";
 import { useCountdown } from "../../utils/useCountdown";
 
 const CountDown = () => {
@@ -17,10 +16,10 @@ const CountDown = () => {
             <span className="sec">{secs}</span>
           </p>
         </TimeWrap>
-        <Link to="/coming-soon" className="btn-link">
+        <button>
           Mint NftNg Pass
           <img src={celebration} alt="" />
-        </Link>
+        </button>
       </Wrapper>
     </Container>
   );
