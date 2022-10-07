@@ -3,22 +3,21 @@ import styled from "styled-components";
 import arrow from "../../img/svg/arrow-left.svg";
 import Contract from "../../utils/contract";
 
-const Minting = ({minted}) => {
-  const acc= sessionStorage.getItem('currentAccount')
-  const {contract}=Contract()
-  const mint=async()=>{
-   
-   
+const Minting = ({ minted }) => {
+  const acc = sessionStorage.getItem("currentAccount");
+  const { contract } = Contract();
+  const mint = async () => {
     // console.log(acc);
 
-   try {
-    const isMinted= await contract.methods.buzzlistMint().send({from:acc})
-     minted()
-   } catch (error) {
-    console.log(error);
-   } 
-    
-  }
+    try {
+      const isMinted = await contract.methods
+        .buzzlistMint()
+        .send({ from: acc });
+      minted();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Container>
       <Header>
@@ -28,9 +27,12 @@ const Minting = ({minted}) => {
       <Desc>
         <h2>Minting</h2>
         <p>
-        Hello Buzzer! Thank you for staying with us, we can't wait to see you at #TheWebThreeBuzz
+          Hello Buzzer! Thank you for staying with us, we can't wait to see you
+          at #TheWebThreeBuzz
         </p>
-        <button style={{margin:'auto'}} onClick={mint}>Mint Now</button>
+        <button style={{ margin: "auto" }} onClick={mint}>
+          Mint Now
+        </button>
       </Desc>
     </Container>
   );

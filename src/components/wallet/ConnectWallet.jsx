@@ -6,15 +6,16 @@ import SuccessFul from "./SuccessFul";
 import Minting from "./Minting";
 
 const ConnectWallet = (props) => {
-  const minted=()=>{
-    setContent(<SuccessFul/>)
-  }
-  const success=()=>{
-    setContent(<Minting minted={minted}/>)
-  }
-  const [content,setContent]=useState(<Wallets finished={minted} closeTab={props.close} success={success}/>)
- 
- 
+  const minted = () => {
+    setContent(<SuccessFul />);
+  };
+  const success = () => {
+    setContent(<Minting minted={minted} />);
+  };
+  const [content, setContent] = useState(
+    <Wallets finished={minted} closeTab={props.close} success={success} />
+  );
+
   return (
     <Container>
       {/* <Wallets />
