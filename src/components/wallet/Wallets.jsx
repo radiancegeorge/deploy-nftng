@@ -37,7 +37,7 @@ const Wallets = ({success,closeTab,finished}) => {
         const acc= await window.ethereum.enable()
         console.log(acc);
         const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call()
-        // const hasReedemed = await contract.methods.hasReedemed(acc[0]).call()
+        
         console.log(contract);
         if(isBuzzListed){
               
@@ -49,10 +49,13 @@ const Wallets = ({success,closeTab,finished}) => {
             else{
               success()
             }
+
+            sessionStorage.setItem('currentAccount',acc[0])
+           
            } catch (error) {
             console.log(error);
            }
-            
+          
             
          
          
