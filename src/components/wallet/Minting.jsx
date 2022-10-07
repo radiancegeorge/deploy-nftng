@@ -29,7 +29,7 @@ const Minting = ({minted}) => {
         <p>
         Hello Buzzer! Thank you for staying with us, we can't wait to see you at #TheWebThreeBuzz
         </p>
-        <button onClick={mint}>Mint Now</button>
+        <button style={{margin:'auto'}} onClick={mint}>Mint Now</button>
       </Desc>
     </Container>
   );
