@@ -11,7 +11,7 @@ import WalletConnectProvider from '@walletconnect/web3-provider'
 import Web3 from "web3";
 import { useNavigate } from "react-router-dom";
 
-const Wallets = ({success,closeTab}) => {
+const Wallets = ({success,closeTab,finished}) => {
   const provider = new WalletConnectProvider({
     // rpc: {
     //   '0xfa2': 'https://rpc.testnet.fantom.network',
@@ -37,11 +37,27 @@ const Wallets = ({success,closeTab}) => {
         const acc= await window.ethereum.enable()
         console.log(acc);
         const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call()
-        console.log(isBuzzListed);
+        // const hasReedemed = await contract.methods.hasReedemed(acc[0]).call()
+        console.log(contract);
         if(isBuzzListed){
+              
+           try {
+            const hasReedemed = await contract.methods.hasRedeemed(acc[0]).call()
+            if(hasReedemed){
+              finished()
+            }
+            else{
+              success()
+            }
+           } catch (error) {
+            console.log(error);
+           }
+            
+            
+         
+         
 
-          console.log(contract);
-           success()
+          //  success()
         }
         else navigate('/opps-buzz')
       } catch (error) {
