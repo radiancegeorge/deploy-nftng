@@ -5,7 +5,7 @@ import celebration1 from "../../img/svg/celebration1.svg";
 import celebration2 from "../../img/svg/celebration2.svg";
 
 const SuccessFul = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
   return (
     <Container>
       <Wrapper>
@@ -15,7 +15,7 @@ const SuccessFul = () => {
           <img src={celebration2} alt="" />
         </div>
         <p className="desc">Minted Successfully</p>
-        <button onClick={()=>navigate('/')}>Yes, take me back</button>
+        <button onClick={() => navigate("/")}>Yes, take me back</button>
       </Wrapper>
     </Container>
   );
