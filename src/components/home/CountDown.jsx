@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import celebration from "../../img/svg/celebration1.svg";
-import { Link } from "react-router-dom";
 import { useCountdown } from "../../utils/useCountdown";
+import ConnectWallet from "../wallet/ConnectWallet";
 
 const CountDown = () => {
   const { days, hours, mins, secs } = useCountdown();
+  const [wallet,setWallet]=useState(false)
   return (
     <Container>
       <Wrapper>
+       {wallet && <ConnectWallet close={()=>setWallet(!wallet)}/>}
         <TimeWrap>
           <p>
             <span className="days">{days}</span>:
@@ -17,10 +19,10 @@ const CountDown = () => {
             <span className="sec">{secs}</span>
           </p>
         </TimeWrap>
-        <Link to="/coming-soon" className="btn-link">
+        <button onClick={()=>setWallet(true)} className="btn-link">
           Mint NftNg Pass
           <img src={celebration} alt="" />
-        </Link>
+        </button>
       </Wrapper>
     </Container>
   );
