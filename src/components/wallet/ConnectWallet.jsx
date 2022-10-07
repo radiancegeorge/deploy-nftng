@@ -12,7 +12,7 @@ const ConnectWallet = (props) => {
   const success=()=>{
     setContent(<Minting minted={minted}/>)
   }
-  const [content,setContent]=useState(<Wallets closeTab={props.close} success={success}/>)
+  const [content,setContent]=useState(<Wallets finished={minted} closeTab={props.close} success={success}/>)
  
  
   return (

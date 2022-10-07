@@ -5,11 +5,12 @@ import Contract from "../../utils/contract";
 
 const Minting = ({minted}) => {
   const acc= sessionStorage.getItem('currentAccount')
-  console.log(acc);
   const {contract}=Contract()
   const mint=async()=>{
    
    
+    // console.log(acc);
+
    try {
     const isMinted= await contract.methods.buzzlistMint().send({from:acc})
      minted()
@@ -29,7 +30,7 @@ const Minting = ({minted}) => {
         <p>
         Hello Buzzer! Thank you for staying with us, we can't wait to see you at #TheWebThreeBuzz
         </p>
-        <button onClick={mint}>Mint Now</button>
+        <button style={{margin:'auto'}} onClick={mint}>Mint Now</button>
       </Desc>
     </Container>
   );
