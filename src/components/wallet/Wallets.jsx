@@ -5,7 +5,6 @@ import Contract from "../../utils/contract";
 import close from "../../img/svg/green-close-circle.svg";
 import metamask from "../../img/wallet/metamask.png";
 import walletConnect from "../../img/wallet/WalletConnect.png";
-import trezor from "../../img/wallet/Bitcoin Trezor.png";
 import coinbase from "../../img/wallet/coinbase.png";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3";

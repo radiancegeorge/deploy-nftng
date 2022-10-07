@@ -10,9 +10,7 @@ const Minting = ({ minted }) => {
     // console.log(acc);
 
     try {
-      const isMinted = await contract.methods
-        .buzzlistMint()
-        .send({ from: acc });
+      await contract.methods.buzzlistMint().send({ from: acc });
       minted();
     } catch (error) {
       console.log(error);
