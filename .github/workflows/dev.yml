@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: ["master"]
+    branches: ["dev"]
 
 jobs:
   build:
@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: rm -rf /home/radiance/nftng.com
-      - run: mkdir /home/radiance/nftng.com
-      - run: cp -r ./build/* /home/radiance/nftng.com/
+      - run: rm -rf /home/radiance/dev.nftng.com
+      - run: mkdir /home/radiance/dev.nftng.com
+      - run: cp -r ./build/* /home/radiance/dev.nftng.com/

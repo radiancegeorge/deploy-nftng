@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import celebration from "../../img/svg/celebration1.svg";
-import { Link } from "react-router-dom";
 import { useCountdown } from "../../utils/useCountdown";
 import ConnectWallet from "../wallet/ConnectWallet";
 
