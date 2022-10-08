@@ -4,6 +4,7 @@ import cloth from "../../img/svg/cloth.svg";
 import money from "../../img/svg/money.svg";
 import { Link } from "react-router-dom";
 import GetPass from "../wallet/GetPass";
+import SuccessFul from "../wallet/SuccessFul";
 
 const ProductLists = () => {
   const [toggle, setToggle] = useState(false);
@@ -80,6 +81,13 @@ const ToggleWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  @media screen and (max-width: 900px) {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #252525;
+  }
 `;
 
 const Wrap = styled.div`

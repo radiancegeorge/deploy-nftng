@@ -5,7 +5,6 @@ const useNewCount = () => {
   const [hours, setHours] = useState("00");
   const [mins, setMins] = useState("00");
   const [secs, setSecs] = useState("00");
-  const [count, setCount] = useState();
 
   let interval;
 
@@ -15,7 +14,6 @@ const useNewCount = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = coutdownDate - now;
-      setCount(distance);
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
@@ -26,6 +24,10 @@ const useNewCount = () => {
 
       if (distance < 0) {
         clearInterval(interval);
+        setDays(0);
+        setHours(0);
+        setMins(0);
+        setSecs(0);
       } else {
         setDays(days);
         setHours(hours);
