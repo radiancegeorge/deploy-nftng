@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import celebration from "../../img/svg/celebration1.svg";
-import { useCountdown } from "../../utils/useCountdown";
+import useCountdown from "../../utils/useCountdown";
+import useNewCount from "../../utils/useNewCount";
 import ConnectWallet from "../wallet/ConnectWallet";
 
 const CountDown = () => {
-  const { days, hours, mins, secs } = useCountdown();
-  const [wallet,setWallet]=useState(false)
+  const { days, hours, mins, secs, count } = useCountdown();
+  const { newDays, newHours, newMins, newSecs } = useNewCount();
+  const [wallet, setWallet] = useState(false);
+
   return (
     <Container>
       <Wrapper>
-       {wallet && <ConnectWallet close={()=>setWallet(!wallet)}/>}
+        {wallet && <ConnectWallet close={() => setWallet(!wallet)} />}
         <TimeWrap>
           <p>
-            <span className="days">{days}</span>:
-            <span className="hours">{hours}</span>:
-            <span className="mins">{mins}</span>:
-            <span className="sec">{secs}</span>
+            <span className="days">{count ? days : newDays}</span>:
+            <span className="hours">{count ? hours : newHours}</span>:
+            <span className="mins">{count ? mins : newMins}</span>:
+            <span className="sec">{count ? secs : newSecs}</span>
           </p>
         </TimeWrap>
-        <button onClick={()=>setWallet(true)} className="btn-link">
-          Mint NftNg Pass
+        <button onClick={() => setWallet(true)} className="btn-link">
+          {count ? "Mint NftNg Pass" : "Mint Here"}
           <img src={celebration} alt="" />
         </button>
       </Wrapper>

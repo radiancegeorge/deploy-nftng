@@ -3,15 +3,21 @@ import styled from "styled-components";
 import opensea from "../../img/openseas.png";
 import close from "../../img/svg/close-circle-white.svg";
 
-const GetPass = () => {
+const GetPass = ({ handler }) => {
   return (
     <Wrapper>
       <div className="top">
         <p>NFTPass Here</p>
-        <img src={close} alt="" />
+        <img src={close} alt="" onClick={handler} />
       </div>
       <div className="opensea">
-        <img src={opensea} alt="" />
+        <a
+          href="https://opensea.io/0x30c517737a08D9e3a58e2733c82F27dC3ba6b794"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={opensea} alt="" />
+        </a>
       </div>
     </Wrapper>
   );
@@ -52,6 +58,7 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 900px) {
     height: 260px;
+    width: 320px;
     padding: 22px;
     p {
       font-size: 14px;
