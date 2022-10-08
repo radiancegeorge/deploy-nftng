@@ -4,7 +4,6 @@ import cloth from "../../img/svg/cloth.svg";
 import money from "../../img/svg/money.svg";
 import { Link } from "react-router-dom";
 import GetPass from "../wallet/GetPass";
-import SuccessFul from "../wallet/SuccessFul";
 
 const ProductLists = () => {
   const [toggle, setToggle] = useState(false);

@@ -9,7 +9,7 @@ const useNewCount = () => {
   let interval;
 
   const startTimer = () => {
-    const coutdownDate = new Date("October 9, 2022 05:00:00").getTime();
+    const coutdownDate = new Date("October 9, 2022 13:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
