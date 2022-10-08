@@ -5,12 +5,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
- 
+    branches: ["master"]
 
 jobs:
   build:
-
     runs-on: self-hosted
 
     strategy:
@@ -19,10 +17,12 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: cp -r ./build/* /home/radiance/nftng.com/
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: rm -rf /home/radiance/nftng.com
+      - run: mkdir /home/radiance/nftng.com
+      - run: cp -r ./build/* /home/radiance/nftng.com/

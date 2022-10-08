@@ -1,8 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import arrow from "../../img/svg/arrow-left.svg";
+import Contract from "../../utils/contract";
 
-const Minting = () => {
+const Minting = ({ minted }) => {
+  const acc = sessionStorage.getItem("currentAccount");
+  const { contract } = Contract();
+  const mint = async () => {
+    // console.log(acc);
+
+    try {
+      await contract.methods.buzzlistMint().send({ from: acc });
+      minted();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Container>
       <Header>
@@ -12,10 +25,12 @@ const Minting = () => {
       <Desc>
         <h2>Minting</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit
-          integer volutpat sit lectus ac sodales nunc molestie in.
+          Hello Buzzer! Thank you for staying with us, we can't wait to see you
+          at #TheWebThreeBuzz
         </p>
-        <button>Mint Now</button>
+        <button style={{ margin: "auto" }} onClick={mint}>
+          Mint Now
+        </button>
       </Desc>
     </Container>
   );

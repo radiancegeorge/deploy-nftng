@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
-export const useCountdown = () => {
+const useCountdown = (date) => {
   const [days, setDays] = useState("00");
   const [hours, setHours] = useState("00");
   const [mins, setMins] = useState("00");
   const [secs, setSecs] = useState("00");
+  const [count, setCount] = useState(0);
 
   let interval;
 
@@ -14,6 +15,7 @@ export const useCountdown = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = coutdownDate - now;
+      setCount(distance);
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
@@ -51,5 +53,8 @@ export const useCountdown = () => {
     hours: handleFormat(hours),
     mins: handleFormat(mins),
     secs: handleFormat(secs),
+    count,
   };
 };
+
+export default useCountdown;

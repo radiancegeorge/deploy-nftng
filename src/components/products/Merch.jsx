@@ -6,7 +6,7 @@ import darkCart from "../../img/svg/dark-cart-wrapped.svg";
 const Merch = ({ image, data, onAdd, checkAvailability }) => {
   const added = checkAvailability(data);
   return (
-    <Container image={image} onClick={() => onAdd(data)}>
+    <Container image={image}>
       <Wrapper>
         <Cart>
           <img src={added ? darkCart : lightCart} alt="" />
@@ -16,7 +16,7 @@ const Merch = ({ image, data, onAdd, checkAvailability }) => {
             <p className="name">{data.name}</p>
             <p className="price">${data.price}</p>
           </div>
-          <button>Add to Cart</button>
+          <button onClick={() => onAdd(data)}>Add to Cart</button>
         </div>
       </Wrapper>
     </Container>

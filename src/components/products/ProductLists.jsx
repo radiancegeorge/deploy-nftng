@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import cloth from "../../img/svg/cloth.svg";
 import money from "../../img/svg/money.svg";
 import { Link } from "react-router-dom";
+import GetPass from "../wallet/GetPass";
 
 const ProductLists = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
       <Container>
+        {toggle && (
+          <ToggleWrap>
+            <GetPass handler={() => setToggle(false)} />
+          </ToggleWrap>
+        )}
+
         <Wrapper>
           <Wrap id="sponsor">
             <div className="apply-header">
@@ -41,9 +50,7 @@ const ProductLists = () => {
               Furthermore, it affords holders early access to other
               products/utilities by the NFTNG team.
             </p>
-            <Link to="/coming-soon" className="btn-link">
-              Get pass
-            </Link>
+            <button onClick={() => setToggle(true)}>Get pass</button>
           </Wrap>
         </Wrapper>
       </Container>
@@ -64,6 +71,16 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div``;
+const ToggleWrap = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Wrap = styled.div`
   width: 100%;
@@ -136,8 +153,10 @@ const Wrap = styled.div`
       line-height: 22px;
     }
 
-    .btn-link {
+    .btn-link,
+    button {
       max-width: 100%;
+
       border-radius: 0;
     }
   }
