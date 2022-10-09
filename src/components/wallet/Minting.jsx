@@ -6,11 +6,12 @@ import Contract from "../../utils/contract";
 const Minting = ({ minted }) => {
   const acc = sessionStorage.getItem("currentAccount");
   const { contract } = Contract();
+  console.log(contract.methods);
   const mint = async () => {
     // console.log(acc);
 
     try {
-      await contract.methods.mint().send({ from: acc });
+      await contract.methods.mint(acc,1).send({ from: acc });
       minted();
     } catch (error) {
       console.log(error);
