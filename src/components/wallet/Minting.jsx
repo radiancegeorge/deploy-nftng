@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import Web3 from "web3";
 import arrow from "../../img/svg/arrow-left.svg";
 import Contract from "../../utils/contract";
 
 const Minting = ({ minted }) => {
   const acc = sessionStorage.getItem("currentAccount");
   const { contract } = Contract();
-  console.log(contract.methods);
+  const web = new Web3();
   const mint = async () => {
     // console.log(acc);
 
     try {
-      await contract.methods.mint(acc,1).send({ from: acc });
+      await contract.methods
+        .mint()
+        .send({ from: acc, value: web.utils.toWei(0.03, "ether") });
       minted();
     } catch (error) {
       console.log(error);
@@ -26,8 +29,8 @@ const Minting = ({ minted }) => {
       <Desc>
         <h2>Minting</h2>
         <p>
-          Hello Buzzer! Thank you for staying with us, we can't wait to see you
-          at #TheWebThreeBuzz
+          Hello There! Welcome to Public Mint, do well to Mint at 0.03ETH. Thank
+          You for Staying With Us 😊
         </p>
         <button style={{ margin: "auto" }} onClick={mint}>
           Mint Now
