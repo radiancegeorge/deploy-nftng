@@ -36,11 +36,11 @@ const Wallets = ({ success, closeTab }) => {
       const acc = await window.ethereum.enable();
       console.log(acc);
       sessionStorage.setItem("currentAccount", acc[0]);
-      const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call();
-      console.log(isBuzzListed);
-      if (isBuzzListed) {
+      // const isBuzzListed = await contract.methods.isBuzzlisted(acc[0]).call();
+      // console.log(isBuzzListed);
+      // if (isBuzzListed) {
         success();
-      } else navigate("/opps-buzz");
+      // } else navigate("/opps-buzz");
     } catch (error) {
       console.log(error);
     }
