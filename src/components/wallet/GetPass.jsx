@@ -12,7 +12,7 @@ const GetPass = ({ handler }) => {
       </div>
       <div className="opensea">
         <a
-          href="https://opensea.io/0x30c517737a08D9e3a58e2733c82F27dC3ba6b794"
+          href="https://opensea.io/collection/nftng-pass"
           target="_blank"
           rel="noreferrer"
         >
