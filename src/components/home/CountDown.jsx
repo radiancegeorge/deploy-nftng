@@ -19,11 +19,20 @@ const CountDown = () => {
             <span className="mins">{newMins}</span>:
             <span className="sec">{newSecs}</span>
           </p>
+          {/* <p>SOLD OUT!!!</p> */}
         </TimeWrap>
         <button onClick={() => setWallet(true)} className="btn-link">
-          {"Mint Here"}
+          Mint Here
           <img src={celebration} alt="" />
         </button>
+        {/* <a
+          href="https://opensea.io/collection/nftng-pass"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-link"
+        >
+          Buy NFTNG Pass Here
+        </a> */}
       </Wrapper>
     </Container>
   );
