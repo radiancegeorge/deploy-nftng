@@ -97,7 +97,8 @@ const Wallets = ({ success, closeTab }) => {
     <Wrapper>
       <div className="header">
         <p>Connect Wallet</p>
-        <img onClick={closeTab} src={close} alt="" />
+
+        <img onClick={closeTab} src={close} alt=""  />
       </div>
       <Grid>
         <div onClick={() => setWalletType("metamask")} className="wrap">
