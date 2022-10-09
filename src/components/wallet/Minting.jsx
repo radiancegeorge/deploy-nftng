@@ -13,8 +13,8 @@ const Minting = ({ minted }) => {
 
     try {
       await contract.methods
-        .mint()
-        .send({ from: acc, value: web.utils.toWei(0.03, "ether") });
+        .mint(acc,1)
+        .send({ from: acc, value: web.utils.toWei('0.03', "ether") });
       minted();
     } catch (error) {
       console.log(error);
