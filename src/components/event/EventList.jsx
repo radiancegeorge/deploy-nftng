@@ -88,7 +88,7 @@ const EventList = () => {
           </GridWrapper>
         </Wrap>
         <Wrap id="e-sponsor">
-          <div className="sponser-wrap">
+          {/* <div className="sponser-wrap">
             <div className="event-header">
               <img src={profile} alt="" />
               <h2>Sponsors</h2>
@@ -105,7 +105,7 @@ const EventList = () => {
                 </a>
               </div>
             </GridImage>
-          </div>
+          </div> */}
           <div className="sponser-wrap">
             <div className="event-header">
               <img src={profile} alt="" />

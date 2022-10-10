@@ -5,7 +5,7 @@ import MissionSection from "../components/home/MissionSection";
 import Video from "../components/home/Video";
 import LifeStyle from "../components/home/LifeStyle";
 import FaqSection from "../components/home/FaqSection";
-import Sponsers from "../components/home/Sponsers";
+// import Sponsers from "../components/home/Sponsers";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 // import ConnectWallet from "../components/wallet/ConnectWallet";
@@ -20,7 +20,7 @@ const Home = () => {
       <MissionSection />
       <LifeStyle />
       <FaqSection />
-      <Sponsers />
+      {/* <Sponsers /> */}
       <ScrollToTop />
       <Footer />
       {/* <ConnectWallet /> */}
