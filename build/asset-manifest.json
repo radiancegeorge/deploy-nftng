@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f37d23a.css",
-    "main.js": "/static/js/main.d02653a4.js",
+    "main.js": "/static/js/main.51e0a786.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.9c575e80443d925dcb53.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -32,6 +32,7 @@
     "static/media/lifestyle1.jpg": "/static/media/lifestyle1.5995300cc0e169e7c6ec.jpg",
     "static/media/nft4.jpeg": "/static/media/nft4.88ee8824861ffb772b5a.jpeg",
     "static/media/nft3.jpeg": "/static/media/nft3.3b9c19d1258cee6f81d4.jpeg",
+    "static/media/emeka.jpg": "/static/media/emeka.327493b9a127778d7df7.jpg",
     "static/media/victor.jpeg": "/static/media/victor.08a95c1bc03a317f1744.jpeg",
     "static/media/justice.jpeg": "/static/media/justice.55595ee37da4cd3e5796.jpeg",
     "static/media/nft7.jpeg": "/static/media/nft7.31080de430d32af27beb.jpeg",
@@ -40,6 +41,7 @@
     "static/media/drogo.jpeg": "/static/media/drogo.622fef7d1684a4d49543.jpeg",
     "static/media/nft-partner2.jpg": "/static/media/nft-partner2.3010b3f74bfac2f9e650.jpg",
     "static/media/Korede Bello.jpg": "/static/media/Korede Bello.9da153df320be091fee2.jpg",
+    "static/media/walker.jpg": "/static/media/walker.54c02be039ca4b753fab.jpg",
     "static/media/nft-partner4.png": "/static/media/nft-partner4.3569f0e39a853b95c069.png",
     "static/media/hamonic.jpg": "/static/media/hamonic.bbcdb6756479649ee57d.jpg",
     "static/media/nft-partner1.jpeg": "/static/media/nft-partner1.df7b4713116e0f0ef3fb.jpeg",
@@ -61,7 +63,6 @@
     "static/media/nft-partner9.jpg": "/static/media/nft-partner9.41e20339033bd4998e8c.jpg",
     "static/media/celebration2.svg": "/static/media/celebration2.20c6ae50cb62a5d2099ba53f66e1e0a5.svg",
     "static/media/Bitcoin keith.jpg": "/static/media/Bitcoin keith.bef74c12a26b8a2cef4c.jpg",
-    "static/media/Big Os.jpeg": "/static/media/Big Os.f85fa51cc5002ec2aa3b.jpeg",
     "static/media/nft-partner3.jpg": "/static/media/nft-partner3.073d1afed2bdbdddc299.jpg",
     "static/media/mission-3.svg": "/static/media/mission-3.d98c40e9536333f40b48969a55e74602.svg",
     "static/media/Anthony Azekwoh.jpg": "/static/media/Anthony Azekwoh.7f876d8ef8bc4ac6e3a8.jpg",
@@ -71,6 +72,7 @@
     "static/media/nft1.jpeg": "/static/media/nft1.963753c4d2470301c2ac.jpeg",
     "static/media/christiane.jpeg": "/static/media/christiane.c7fa9bd87324391f5591.jpeg",
     "static/media/mission-1.svg": "/static/media/mission-1.6b2c0b794a85a033540864eb2179c9d4.svg",
+    "static/media/partner3.png": "/static/media/partner3.07c08e0045c0553819bf.png",
     "static/media/nft-partner8.jpg": "/static/media/nft-partner8.dcb1de39079c71e1660c.jpg",
     "static/media/desmond.jpeg": "/static/media/desmond.7da08c8db0c8fd1161ba.jpeg",
     "static/media/nft-partner6.jpg": "/static/media/nft-partner6.ec1cc8fd11ff1ebdd3b1.jpg",
@@ -107,10 +109,10 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.3f37d23a.css.map": "/static/css/main.3f37d23a.css.map",
-    "main.d02653a4.js.map": "/static/js/main.d02653a4.js.map"
+    "main.51e0a786.js.map": "/static/js/main.51e0a786.js.map"
   },
   "entrypoints": [
     "static/css/main.3f37d23a.css",
-    "static/js/main.d02653a4.js"
+    "static/js/main.51e0a786.js"
   ]
 }

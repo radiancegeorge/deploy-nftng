@@ -1,38 +1,38 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import celebration from "../../img/svg/celebration1.svg";
-import useNewCount from "../../utils/useNewCount";
-import ConnectWallet from "../wallet/ConnectWallet";
+// import celebration from "../../img/svg/celebration1.svg";
+// // import useNewCount from "../../utils/useNewCount";
+// // import ConnectWallet from "../wallet/ConnectWallet";
 
 const CountDown = () => {
-  const { newDays, newHours, newMins, newSecs } = useNewCount();
+  // const { newDays, newHours, newMins, newSecs } = useNewCount();
   const [wallet, setWallet] = useState(false);
 
   return (
     <Container>
       <Wrapper>
-        {wallet && <ConnectWallet close={() => setWallet(!wallet)} />}
+        {/* {wallet && <ConnectWallet close={() => setWallet(!wallet)} />} */}
         <TimeWrap>
-          <p>
+          {/* <p>
             <span className="days">{newDays}</span>:
             <span className="hours">{newHours}</span>:
             <span className="mins">{newMins}</span>:
             <span className="sec">{newSecs}</span>
-          </p>
-          {/* <p>SOLD OUT!!!</p> */}
+          </p> */}
+          <p className="sold">SOLD OUT!!!</p>
         </TimeWrap>
-        <button onClick={() => setWallet(true)} className="btn-link">
+        {/* <button onClick={() => setWallet(true)} className="btn-link">
           Mint Here
           <img src={celebration} alt="" />
-        </button>
-        {/* <a
+        </button> */}
+        <a
           href="https://opensea.io/collection/nftng-pass"
           target="_blank"
           rel="noreferrer"
           className="btn-link"
         >
-          Buy NFTNG Pass Here
-        </a> */}
+          Get NFTng Pass
+        </a>
       </Wrapper>
     </Container>
   );
@@ -54,10 +54,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   button,
   .btn-link {
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 15px;
     width: 460px;
     font-family: var(--inter);
@@ -79,7 +80,7 @@ const Wrapper = styled.div`
     align-items: center;
     button,
     .btn-link {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 12px;
       width: 100%;
       img {
@@ -92,6 +93,10 @@ const Wrapper = styled.div`
 
 const TimeWrap = styled.div`
   color: white;
+
+  .sold {
+    font-family: var(--Neue-Helvetica-heavy);
+  }
 
   p {
     font-size: 64px;
@@ -125,7 +130,7 @@ const TimeWrap = styled.div`
   }
   @media screen and (max-width: 900px) {
     p {
-      font-size: 37px;
+      font-size: 30px;
     }
     span::before {
       font-size: 6px;

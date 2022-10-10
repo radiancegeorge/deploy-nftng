@@ -6,6 +6,7 @@ import slider2 from "../../img/event-slider2.jpeg";
 import slider3 from "../../img/event-slider3.jpeg";
 import partner1 from "../../img/nft-partners/partner1.jpeg";
 import partner2 from "../../img/nft-partners/partner2.jpeg";
+import partner3 from "../../img/nft-partners/partner3.png";
 import map from "../../img/map.png";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -143,6 +144,15 @@ const EventList = () => {
                   rel="noreferrer"
                 >
                   <img src={partner2} alt="" />
+                </a>
+              </div>
+              <div className="img-wrap">
+                <a
+                  href="https://cryptotvplus.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={partner3} alt="" />
                 </a>
               </div>
             </GridImage>

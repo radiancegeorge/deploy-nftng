@@ -10,7 +10,7 @@ import debbie from "../img/debbie.jpeg";
 import urbanplug from "../img/urbanplug.jpeg";
 import yemis from "../img/yemis.jpeg";
 import havers from "../img/havers.jpeg";
-import BigOs from "../img/Big Os.jpeg";
+import BigOs from "../img/emeka.jpg";
 import tokyo from "../img/tokyo.jpeg";
 import christiane from "../img/christiane.jpeg";
 import desmond from "../img/desmond.jpeg";
@@ -123,10 +123,10 @@ export const otherTeam = [
   },
   {
     id: 11,
-    name: "Abobade Oluwatobi",
+    name: "Tony Emeka",
     role: "Advisory",
     img: `${BigOs}`,
-    social: "https://twitter.com/BigOsCrypt?t=X2YQcPohoQcOBpQJtotAnA&s=09",
+    social: "https://twitter.com/nwabishop?s=21&t=pIqbyqrkgxhCIsi48Z-JNQ",
   },
   {
     id: 12,

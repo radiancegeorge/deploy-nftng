@@ -39,11 +39,12 @@ const Wrap = styled.div`
   width: 100%;
   height: fit-content;
   margin: 0 auto;
+  background-color: #0000004f;
 `;
 
 const GridWrapper = styled.div`
   padding: 40px 60px;
-  background-color: #0000004f;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto);

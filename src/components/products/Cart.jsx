@@ -1,31 +1,46 @@
 import React from "react";
 import styled from "styled-components";
 import CartValue from "./CartValue";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart }) => {
-  console.log(cart);
+  const navigate = useNavigate();
   return (
     <Container>
-      <Wrapper>
-        <LeftWrap>
-          <CartValue />
-          <CartValue />
-        </LeftWrap>
-        <RightWrap>
-          <div className="summary">
-            <p className="value">Cart Summary</p>
-            <hr />
-            <div className="s-desc">
-              <div className="sub-desc">
-                <p>Subtotal</p>
-                <p className="label">Delivery fees not included yet.</p>
+      {cart.length ? (
+        <Wrapper>
+          <LeftWrap>
+            <CartValue />
+            <CartValue />
+          </LeftWrap>
+          <RightWrap>
+            <div className="summary">
+              <p className="value">Cart Summary</p>
+              <hr />
+              <div className="s-desc">
+                <div className="sub-desc">
+                  <p>Subtotal</p>
+                  <p className="label">Delivery fees not included yet.</p>
+                </div>
+                <p className="value">NGN30,000</p>
               </div>
-              <p className="value">NGN30,000</p>
+              <button>Checkout (NGN30,000)</button>
             </div>
-            <button>Checkout (NGN30,000)</button>
+          </RightWrap>
+        </Wrapper>
+      ) : (
+        <Message>
+          <div className="m-wrap">
+            <p>
+              You have no item in your cart kindly add some item from the merch
+              section
+            </p>
+            <button onClick={() => navigate("/products/merchandise")}>
+              Add items
+            </button>
           </div>
-        </RightWrap>
-      </Wrapper>
+        </Message>
+      )}
     </Container>
   );
 };
@@ -126,6 +141,38 @@ const RightWrap = styled.div`
     }
     button {
       font-size: 14px;
+    }
+  }
+`;
+
+const Message = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  .m-wrap {
+    width: 100%;
+    margin: 0 10vw;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.31);
+    gap: 30px;
+    text-align: center;
+
+    p {
+      color: var(--primary-color);
+      max-width: 400px;
+      font-size: 16px;
+      font-family: var(--inter);
+    }
+    button {
+      width: 210px;
+      font-size: 13px;
+      padding: 16px;
     }
   }
 `;

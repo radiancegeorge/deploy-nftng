@@ -17,6 +17,7 @@ import khatanbuuvei from "../img/speakers/Mr Khatanbuuvei.jpeg";
 import tytan from "../img/speakers/tytan.jpeg";
 import chika from "../img/speakers/chika.jpeg";
 import shodipo from "../img/speakers/shodipo.jpeg";
+import walker from "../img/speakers/walker.jpg";
 
 export const ntfPartner = [
   {
@@ -126,5 +127,11 @@ export const speakers = [
     img: `${chika}`,
     name: "Chika Uwazie",
     twitter: "https://twitter.com/chikauwazie?s=11&t=Y4JxGKKKzroHM31X0hYWBA",
+  },
+  {
+    id: 11,
+    img: `${walker}`,
+    name: "Walker Guffey",
+    twitter: "https://twitter.com/walkerguffey?s=11&t=xMCISdQ4rQRyQsFsUl0VCA",
   },
 ];

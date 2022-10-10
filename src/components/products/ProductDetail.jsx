@@ -6,7 +6,8 @@ import shopCart from "../../img/svg/shopping-cart.svg";
 import Cart from "./Cart";
 import { useNavigate, useLocation, Navigate, Link } from "react-router-dom";
 import MerchandiseSection from "./MerchandiseSection";
-import Checkout from "../forms/Checkout";
+// import CheckoutForm from "../forms/CheckoutForm";
+import Checkout from "./Checkout";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
@@ -79,13 +80,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
   width: 100%;
   min-height: 100vh;
   background-color: #252525;
 
   .back {
     position: absolute;
+    cursor: pointer;
     top: 18vh;
     left: 5vw;
     display: flex;
