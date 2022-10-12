@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import jacob from "../../img/Jacob.png";
 
 const Checkout = () => {
   return (
@@ -42,6 +43,29 @@ const Checkout = () => {
         </LeftWrapper>
         <RigthWrapper>
           <h2>Your Orders (4 items)</h2>
+          <RightWrap>
+            <div className="r-wrap">
+              <div className="img-wrap">
+                <img src={jacob} alt="" />
+              </div>
+              <div className="r-desc">
+                <p>NftNg Hoodies</p>
+                <p>NGN 5000</p>
+                <p>Qty: 1</p>
+              </div>
+            </div>
+            <div className="r-wrap">
+              <div className="img-wrap">
+                <img src={jacob} alt="" />
+              </div>
+              <div className="r-desc">
+                <p>NftNg Hoodies</p>
+                <p>NGN 5000</p>
+                <p>Qty: 1</p>
+              </div>
+            </div>
+          </RightWrap>
+          <button>Modify cart</button>
         </RigthWrapper>
       </Wrapper>
     </Container>
@@ -58,6 +82,11 @@ const Wrapper = styled.div`
   p {
     font-family: var(--Branding-sf-light);
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 0;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -101,6 +130,10 @@ const Address = styled.div`
     flex-direction: column;
     gap: 13px;
   }
+  @media screen and (max-width: 900px) {
+    background-color: rgba(9, 9, 9, 1);
+    border: none;
+  }
 `;
 
 const Summary = styled.div`
@@ -108,6 +141,7 @@ const Summary = styled.div`
   flex-direction: column;
   gap: 13px;
   padding: 40px 32px;
+
   hr {
     border-color: rgba(161, 210, 131, 0.15);
   }
@@ -134,16 +168,77 @@ const Summary = styled.div`
     padding: 16px;
     border-radius: 10px;
   }
+  @media screen and (max-width: 900px) {
+    background-color: rgba(9, 9, 9, 1);
+  }
 `;
 
 const RigthWrapper = styled.div`
   width: 50%;
   padding: 32px 26px;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.26);
   h2 {
     font-size: 18px;
     color: var(--primary-color);
     font-family: var(--Branding-sf-bold);
     margin-bottom: 28px;
+  }
+  button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 18px;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 14px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    margin-bottom: 28px;
+    background-color: rgba(9, 9, 9, 1);
+  }
+`;
+
+const RightWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .r-wrap {
+    display: flex;
+    gap: 26px;
+  }
+  .img-wrap {
+    width: 80px;
+    height: 110px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .r-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p:nth-child(1) {
+      font-size: 14px;
+    }
+
+    p:nth-child(2),
+    p:nth-child(3) {
+      font-size: 12px;
+    }
+
+    p:nth-child(1),
+    p:nth-child(2) {
+      font-family: var(--Branding-sf-bold);
+    }
+
+    p:nth-child(2) {
+      color: var(--primary-color);
+    }
   }
 `;

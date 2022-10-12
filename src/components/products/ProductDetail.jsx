@@ -7,6 +7,7 @@ import Cart from "./Cart";
 import { useNavigate, useLocation, Navigate, Link } from "react-router-dom";
 import MerchandiseSection from "./MerchandiseSection";
 // import CheckoutForm from "../forms/CheckoutForm";
+import Successful from "./Successful";
 import Checkout from "./Checkout";
 
 const ProductDetail = () => {
@@ -62,6 +63,8 @@ const ProductDetail = () => {
           <Cart cart={cartValue} />
         ) : pathname === "/products/checkout" ? (
           <Checkout />
+        ) : pathname === "/products/successful" ? (
+          <Successful />
         ) : (
           <Navigate to="/not-found" />
         )}

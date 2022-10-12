@@ -7,6 +7,8 @@ import slider3 from "../../img/event-slider3.jpeg";
 import partner1 from "../../img/nft-partners/partner1.jpeg";
 import partner2 from "../../img/nft-partners/partner2.jpeg";
 import partner3 from "../../img/nft-partners/partner3.png";
+import partner4 from "../../img/nft-partners/partner4.jpg";
+import partner5 from "../../img/nft-partners/partner5.jpg";
 import map from "../../img/map.png";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -153,6 +155,24 @@ const EventList = () => {
                   rel="noreferrer"
                 >
                   <img src={partner3} alt="" />
+                </a>
+              </div>
+              <div className="img-wrap">
+                <a
+                  href="https://twitter.com/socialpass_io?s=11&t=1AQ0-pc6Joh9ITJR-z9Wfg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={partner4} alt="" />
+                </a>
+              </div>
+              <div className="img-wrap">
+                <a
+                  href="https://twitter.com/mtvbasewest?s=11&t=TALBKzpEihHBZ5f2i5J4rg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={partner5} alt="" />
                 </a>
               </div>
             </GridImage>

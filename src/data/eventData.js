@@ -18,6 +18,7 @@ import tytan from "../img/speakers/tytan.jpeg";
 import chika from "../img/speakers/chika.jpeg";
 import shodipo from "../img/speakers/shodipo.jpeg";
 import walker from "../img/speakers/walker.jpg";
+import boom from "../img/speakers/boom.jpg";
 
 export const ntfPartner = [
   {
@@ -133,5 +134,11 @@ export const speakers = [
     img: `${walker}`,
     name: "Walker Guffey",
     twitter: "https://twitter.com/walkerguffey?s=11&t=xMCISdQ4rQRyQsFsUl0VCA",
+  },
+  {
+    id: 11,
+    img: `${boom}`,
+    name: "Elja Boom",
+    twitter: "https://twitter.com/eljaboom?s=11&t=TALBKzpEihHBZ5f2i5J4rg",
   },
 ];
