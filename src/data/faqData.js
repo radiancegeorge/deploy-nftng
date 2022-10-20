@@ -20,7 +20,7 @@ export const faqData = [
   {
     id: 4,
     title: "What is the date and venue of the Webthree Buzz Event?",
-    desc: `To Be Announced`,
+    desc: `11th of November, 2022`,
   },
   {
     id: 5,

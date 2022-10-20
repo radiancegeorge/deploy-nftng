@@ -187,7 +187,7 @@ const Wrapper = styled.div`
     margin-top: 38px;
     font-family: var(--Branding-sf-medium);
 
-    align-items: center;
+    align-items: center;n
   }
   @media screen and (max-width: 900px) {
     .down {
