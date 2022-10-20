@@ -19,7 +19,8 @@ const CountDown = () => {
             <span className="mins">{newMins}</span>:
             <span className="sec">{newSecs}</span>
           </p> */}
-          <p className="sold">SOLD OUT!!!</p>
+          <p className="time">11th OF NOVEMBER, 2022</p>
+          {/* <p className="sold">SOLD OUT!!!</p> */}
         </TimeWrap>
         {/* <button onClick={() => setWallet(true)} className="btn-link">
           Mint Here
@@ -44,7 +45,7 @@ const Container = styled.div`
   width: 100%;
   padding: 70px 0 40px;
   @media screen and (max-width: 900px) {
-    padding-top: 30px;
+    padding-top: 0px;
   }
 `;
 
@@ -93,13 +94,20 @@ const Wrapper = styled.div`
 
 const TimeWrap = styled.div`
   color: white;
+  text-align: center;
 
-  .sold {
+  .sold,
+  .time {
     font-family: var(--Neue-Helvetica-heavy);
   }
 
+  .sold {
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
   p {
-    font-size: 64px;
+    font-size: 45px;
     font-family: var(--inter);
     font-weight: 700;
     letter-spacing: 6px;
@@ -130,7 +138,12 @@ const TimeWrap = styled.div`
   }
   @media screen and (max-width: 900px) {
     p {
-      font-size: 30px;
+      font-size: 25px;
+      max-width: 300px;
+    }
+
+    .sold {
+      font-size: 12px;
     }
     span::before {
       font-size: 6px;

@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
+import OptionSelect from "../OptionSelect";
+import fetchLocation from "../../fetch/fetchLocation";
 
 const CheckoutForm = () => {
   const [first, setFirst] = useState("");
@@ -7,16 +10,50 @@ const CheckoutForm = () => {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  const [country, setCountry] = useState("");
+  const [countryList, setCountryList] = useState([]);
+  const [selectCountry, setSelectCountry] = useState("");
+  const [states, setStates] = useState("");
+  const [statesList, setStatesList] = useState([]);
+  const [selectStates, setSelectStates] = useState("");
 
   const [inputFocus, setInputFocus] = useState(false);
   const onFocus = () => setInputFocus(true);
   const onBlur = () => setInputFocus(false);
 
+  const sortArray = (x, y) => {
+    if (x.name < y.name) {
+      return -1;
+    }
+    if (x.name > y.name) {
+      return 1;
+    }
+    return 0;
+  };
+
+  useEffect(() => {
+    const getCountry = async () => {
+      const res = await fetchLocation.get("/get-countries");
+      const data = res.data;
+      setCountryList(data.sort(sortArray));
+
+      if (selectCountry) {
+        const res = await fetchLocation.get(
+          `/get-states?countryCode=${selectCountry.code}`
+        );
+        const data = res.data;
+        setStatesList(data.sort(sortArray));
+      }
+    };
+
+    getCountry();
+  }, []);
+
   return (
     <Container>
       <Wrapper>
         <Form inputFocus={inputFocus}>
-          <div className="name">
+          <div className="flex">
             <input
               type="text"
               placeholder="First Name"
@@ -53,6 +90,25 @@ const CheckoutForm = () => {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></textarea>
+          <div className="flex">
+            <OptionSelect
+              title={"Country"}
+              setOption={setCountry}
+              option={country}
+              arr={countryList}
+              emptyMes="...."
+              setSelectOption={setSelectCountry}
+            />
+            <OptionSelect
+              title={"State/Region"}
+              setOption={setStates}
+              option={states}
+              arr={statesList}
+              emptyMes="...."
+              setSelectOption={setSelectStates}
+            />
+            <OptionSelect title={"City"} emptyMes="...." />
+          </div>
         </Form>
       </Wrapper>
     </Container>
@@ -81,6 +137,7 @@ const Form = styled.div`
     background-color: transparent;
     padding: 8px 10px;
     font-size: 14px;
+    border-radius: 5px;
 
     &::placeholder {
       font-size: 16px;
@@ -90,7 +147,7 @@ const Form = styled.div`
   textarea {
     height: 105px;
   }
-  .name {
+  .flex {
     display: flex;
     gap: 12px;
   }

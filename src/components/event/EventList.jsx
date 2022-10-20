@@ -9,6 +9,7 @@ import partner2 from "../../img/nft-partners/partner2.jpeg";
 import partner3 from "../../img/nft-partners/partner3.png";
 import partner4 from "../../img/nft-partners/partner4.jpg";
 import partner5 from "../../img/nft-partners/partner5.jpg";
+import partner6 from "../../img/nft-partners/partner6.jpg";
 import map from "../../img/map.png";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -173,6 +174,15 @@ const EventList = () => {
                   rel="noreferrer"
                 >
                   <img src={partner5} alt="" />
+                </a>
+              </div>
+              <div className="img-wrap img-6">
+                <a
+                  href="https://twitter.com/felbeth_/status/1545001668143718400?s=46&t=cDvO6HcH1RSmxrJQEvp96Q"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={partner6} alt="" />
                 </a>
               </div>
             </GridImage>
@@ -472,6 +482,11 @@ const GridImage = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+  .img-6 {
+    img {
+      object-fit: contain;
     }
   }
   @media screen and (max-width: 900px) {

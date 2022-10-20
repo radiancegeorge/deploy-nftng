@@ -186,6 +186,9 @@ const Wrapper = styled.div`
     color: white;
     margin-top: 38px;
     font-family: var(--Branding-sf-medium);
+    display: none;
+    position: absolute;
+    bottom: 60px;
 
     align-items: center;
   }

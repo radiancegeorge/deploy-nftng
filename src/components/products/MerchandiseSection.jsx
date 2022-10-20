@@ -6,7 +6,7 @@ import Merch from "./Merch";
 
 import { merchsData } from "../../data/merchsData";
 
-const MerchandiseSection = ({ checkAvailability, handleAddToCart }) => {
+const MerchandiseSection = ({ checkAvailability, handleAddToCart, admin }) => {
   return (
     <Container>
       <Wrap>
@@ -18,6 +18,7 @@ const MerchandiseSection = ({ checkAvailability, handleAddToCart }) => {
               image={jacob}
               data={data}
               checkAvailability={checkAvailability}
+              admin={admin}
             />
           ))}
         </GridWrapper>

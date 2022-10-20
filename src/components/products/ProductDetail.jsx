@@ -6,14 +6,16 @@ import shopCart from "../../img/svg/shopping-cart.svg";
 import Cart from "./Cart";
 import { useNavigate, useLocation, Navigate, Link } from "react-router-dom";
 import MerchandiseSection from "./MerchandiseSection";
-// import CheckoutForm from "../forms/CheckoutForm";
+import CheckoutForm from "../forms/CheckoutForm";
 import Successful from "./Successful";
-import Checkout from "./Checkout";
+// import Checkout from "./Checkout";
+import { state, getCity } from "../../utils/getStateCity";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [cartValue, setCartValue] = useState([]);
+  const [admin, setAdmin] = useState(false);
 
   const handleAddToCart = (data) => {
     const exist = cartValue.some((d) => d.id === data.id);
@@ -30,46 +32,51 @@ const ProductDetail = () => {
 
   return (
     <Container>
-      <div className="back" onClick={() => navigate(-1)}>
-        <img src={arrow} alt="" />
-        <p>Back</p>
-      </div>
-      <Wrapper>
-        <div className="nav">
-          {pathname === "/products/merchandise" ? (
-            <h1>
-              Products/ <span>merchandise</span>
-            </h1>
-          ) : (
-            <h1>Your cart</h1>
-          )}
-
-          <Link to="/products/cart">
-            <div className="cart">
-              <img src={shopCart} alt="" />
-              {cartValue.length ? (
-                <p>{cartValue.length} item added to your cart</p>
-              ) : null}
-            </div>
-          </Link>
+      {pathname !== "/products/successful" && (
+        <div className="back" onClick={() => navigate(-1)}>
+          <img src={arrow} alt="" />
+          <p>Back</p>
         </div>
+      )}
+      <Wrapper>
+        {pathname !== "/products/successful" && (
+          <div className="nav">
+            {pathname === "/products/merchandise" ? (
+              <h1>
+                Products/ <span>merchandise</span>
+              </h1>
+            ) : (
+              <h1>Your cart</h1>
+            )}
+
+            <Link to="/products/cart">
+              <div className="cart">
+                <img src={shopCart} alt="" />
+                {cartValue.length ? (
+                  <p>{cartValue.length} item added to your cart</p>
+                ) : null}
+              </div>
+            </Link>
+          </div>
+        )}
         {pathname === "/products/merchandise" ? (
           <MerchandiseSection
             checkAvailability={checkAvailability}
             handleAddToCart={handleAddToCart}
             cartValue={cartValue}
+            admin={admin}
           />
         ) : pathname === "/products/cart" ? (
           <Cart cart={cartValue} />
         ) : pathname === "/products/checkout" ? (
-          <Checkout />
+          <CheckoutForm />
         ) : pathname === "/products/successful" ? (
           <Successful />
         ) : (
           <Navigate to="/not-found" />
         )}
       </Wrapper>
-      <Footer />
+      {pathname !== "/products/successful" && <Footer />}
     </Container>
   );
 };
@@ -84,6 +91,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+
   min-height: 100vh;
   background-color: #252525;
 
@@ -113,7 +121,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 14vh 0;
+  height: 100%;
+  padding: 14vh 0;
   .nav {
     display: flex;
     justify-content: space-between;

@@ -19,6 +19,9 @@ import chika from "../img/speakers/chika.jpeg";
 import shodipo from "../img/speakers/shodipo.jpeg";
 import walker from "../img/speakers/walker.jpg";
 import boom from "../img/speakers/boom.jpg";
+import Khaycee from "../img/speakers/Sir Khaycee.jpg";
+import Okuku from "../img/speakers/Okuku.jpg";
+import Michael from "../img/speakers/Michael.jpg";
 
 export const ntfPartner = [
   {
@@ -136,9 +139,27 @@ export const speakers = [
     twitter: "https://twitter.com/walkerguffey?s=11&t=xMCISdQ4rQRyQsFsUl0VCA",
   },
   {
-    id: 11,
+    id: 12,
     img: `${boom}`,
     name: "Elja Boom",
     twitter: "https://twitter.com/eljaboom?s=11&t=TALBKzpEihHBZ5f2i5J4rg",
+  },
+  {
+    id: 13,
+    img: `${Khaycee}`,
+    name: "Sir Khaycee",
+    twitter: "https://twitter.com/kceeonyekachi1",
+  },
+  {
+    id: 14,
+    img: `${Okuku}`,
+    name: "Okuku Nelson",
+    twitter: "https://twitter.com/shugadaddii_?s=11&t=16cvr3xSSlgHZPdJN8uJCg",
+  },
+  {
+    id: 15,
+    img: `${Michael}`,
+    name: "Michael Ugwu",
+    twitter: "https://twitter.com/iam_metamike",
   },
 ];

@@ -99,6 +99,7 @@ textarea {
   width: 100%;
   color: white;
   resize: none;
+  font-family: var(--Branding-sf-light);
 }
 input::placeholder,
 textarea::placeholder {

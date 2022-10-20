@@ -3,8 +3,8 @@ import styled from "styled-components";
 import lightCart from "../../img/svg/light-cart-wrapped.svg";
 import darkCart from "../../img/svg/dark-cart-wrapped.svg";
 
-const Merch = ({ image, data, onAdd, checkAvailability }) => {
-  const added = checkAvailability(data);
+const Merch = ({ image, data, onAdd, checkAvailability, admin }) => {
+  const added = checkAvailability();
   return (
     <Container image={image}>
       <Wrapper>
@@ -16,7 +16,9 @@ const Merch = ({ image, data, onAdd, checkAvailability }) => {
             <p className="name">{data.name}</p>
             <p className="price">${data.price}</p>
           </div>
-          <button onClick={() => onAdd(data)}>Add to Cart</button>
+          <button onClick={() => onAdd(data)}>
+            {admin ? "Edit" : "Add to Cart"}
+          </button>
         </div>
       </Wrapper>
     </Container>
