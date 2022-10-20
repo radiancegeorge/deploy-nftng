@@ -45,7 +45,7 @@ const Container = styled.div`
   width: 100%;
   padding: 70px 0 40px;
   @media screen and (max-width: 900px) {
-    padding-top: 0px;
+    padding-top: 30px;
   }
 `;
 
