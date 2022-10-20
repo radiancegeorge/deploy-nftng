@@ -192,7 +192,6 @@ const Wrapper = styled.div`
   @media screen and (max-width: 900px) {
     .down {
       display: flex;
-      margin-top: 20px;
       gap: 4px;
     }
     .btn-link {
