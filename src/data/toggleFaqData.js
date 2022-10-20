@@ -23,7 +23,7 @@ export const questionAnswer = [
   {
     id: 4,
     question: "What is the date and venue?",
-    answer: `1th of November, 2022`,
+    answer: `11th of November, 2022`,
     toggle: false,
   },
 ];
