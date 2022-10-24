@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import styled from "styled-components";
 
 import jacob from "../../img/Jacob.png";
@@ -13,16 +13,46 @@ const MerchandiseSection = ({
 }) => {
   const { merchandiseData, handleGetMerchandise } = useMerchandise();
   const [merchandise, setMerchandise] = useState([]);
-
+  const intersectorWatch = useRef();
   useEffect(() => {
     setMerchandise([]);
-    handleGetMerchandise();
+    handleGetMerchandise({ limit: 4 });
   }, []);
 
   useEffect(() => {
     merchandiseData.data?.results.length &&
       setMerchandise((state) => [...state, ...merchandiseData.data?.results]);
   }, [merchandiseData.data?.results]);
+
+  const observer = useMemo(() => {
+    const options = {
+      // root:
+      rootMargin: "20px",
+      threshold: 1.0,
+    };
+    return new IntersectionObserver(([entries]) => {
+      const { isIntersecting } = entries;
+      console.log(
+        isIntersecting,
+        merchandiseData?.data?.totalPages > merchandiseData?.data?.page
+      );
+
+      isIntersecting &&
+        merchandiseData?.data?.totalPages > merchandiseData?.data?.page &&
+        handleGetMerchandise({
+          limit: 4,
+          page: merchandiseData.data.page + 1,
+        }) &&
+        observer.unobserve(intersectorWatch.current);
+    }, options);
+  }, [merchandise]);
+
+  useEffect(() => {
+    if (intersectorWatch.current) {
+      observer.observe(intersectorWatch.current);
+    }
+    return () => observer.disconnect();
+  }, [merchandise]);
 
   return (
     <Container>
@@ -38,6 +68,9 @@ const MerchandiseSection = ({
               handleSelect={handleSelect}
             />
           ))}
+          {merchandiseData.data?.page < merchandiseData.data?.totalPages && (
+            <div className="intersectionCheck" ref={intersectorWatch} />
+          )}
         </GridWrapper>
       </Wrap>
     </Container>
