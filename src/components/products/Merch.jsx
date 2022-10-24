@@ -18,7 +18,7 @@ const Merch = ({ image, data, onAdd, checkAvailability, admin }) => {
             <p className="price">${data.price}</p>
           </div>
           <button onClick={() => onAdd(data)}>
-            {admin ? "Edit" : "Add to Cart"}
+            {added ? "Remove" : "Add to Cart"}
           </button>
         </div>
       </Wrapper>

@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import jacob from "../../img/Jacob.png";
 import Merch from "./Merch";
 
-import { merchsData } from "../../data/merchsData";
+import useMerchandise from "../../hooks/merchandise";
 
 const MerchandiseSection = ({
   checkAvailability,
   handleAddToCart,
   handleSelect,
 }) => {
+  const { merchandiseData, handleGetMerchandise } = useMerchandise();
+  const [merchandise, setMerchandise] = useState([]);
+
+  useEffect(() => {
+    setMerchandise([]);
+    handleGetMerchandise();
+  }, []);
+
+  useEffect(() => {
+    merchandiseData.data?.results.length &&
+      setMerchandise((state) => [...state, ...merchandiseData.data?.results]);
+  }, [merchandiseData.data?.results]);
+
   return (
     <Container>
       <Wrap>
         <GridWrapper>
-          {merchsData.map((data) => (
+          {merchandise.map((data) => (
             <Merch
               onAdd={handleAddToCart}
               key={data.id}
-              image={jacob}
+              image={data.images?.length ? data.images[0].url : jacob}
               data={data}
               checkAvailability={checkAvailability}
               handleSelect={handleSelect}
@@ -51,8 +64,8 @@ const GridWrapper = styled.div`
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto);
-  gap: 0 3vw;
+  grid-template-rows: auto;
+  gap: 3vw;
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
