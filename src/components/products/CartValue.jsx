@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import img from "../../img/Jacob.png";
 
-const CartValue = () => {
+const CartValue = ({item}) => {
+  console.log(item);
+  const [quantity,setQuantity]=useState(0)
   return (
     <Container>
       <div className="remove">
@@ -46,44 +48,37 @@ const CartValue = () => {
       </div>
       <Wrapper>
         <div className="img-wrap">
-          <img src={img} alt="" />
+          <img src={item.images[0].url} alt="" />
           <span>BUZZ Hoodie</span>
         </div>
         <div className="detail">
           <div className="name">
             <p className="label">Merch Name</p>
-            <p className="value">NFTNG Buzz Hoodie</p>
+            <p className="value">{item.name}</p>
           </div>
           <div className="amount">
             <p className="label">Amount</p>
-            <p className="value">NGN30,000</p>
+            <p className="value">NGN{item.price}</p>
           </div>
           <div className="values">
             <Sizes>
               <p className="label">Size Guide</p>
               <div className="sizes-wrap">
-                <div className="select">
-                  <label htmlFor="m">M</label>
-                  <input type="radio" name="" id="m" />
+              {
+                item.sizes.map(size=>(
+                  <div className="select">
+                  <label htmlFor={size}>{size}</label>
+                  <input type="radio" name="" value={size} />
                 </div>
-                <div className="select">
-                  <label htmlFor="l">L</label>
-                  <input type="radio" name="" id="l" />
-                </div>
-                <div className="select">
-                  <label htmlFor="xl">XL</label>
-                  <input type="radio" name="" id="xl" />
-                </div>
-                <div className="select">
-                  <label htmlFor="x">XXL</label>
-                  <input type="radio" name="" id="xxl" />
-                </div>
+                ))
+              }  
+              
               </div>
             </Sizes>
             <Quantity>
               <p className="label">Quantity</p>
               <div className="counter">
-                <svg
+                <svg onClick={()=>setQuantity(quantity=>quantity-1)}
                   width="26"
                   height="27"
                   viewBox="0 0 26 27"
@@ -110,10 +105,10 @@ const CartValue = () => {
                 </svg>
 
                 <div className="count">
-                  <span>2</span>
+                  <span>{quantity}</span>
                 </div>
 
-                <svg
+                <svg onClick={()=>setQuantity(quantity=>quantity+1)}
                   width="27"
                   height="27"
                   viewBox="0 0 27 27"

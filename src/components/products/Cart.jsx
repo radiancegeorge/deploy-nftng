@@ -5,13 +5,19 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart }) => {
   const navigate = useNavigate();
+
+  console.log(cart);
   return (
     <Container>
       {cart.length ? (
         <Wrapper>
           <LeftWrap>
-            <CartValue />
-            <CartValue />
+            {/* <CartValue />
+            <CartValue /> */}{
+              cart?.map(item=>{
+                <CartValue item={item}/>
+              })
+            }
           </LeftWrap>
           <RightWrap>
             <div className="summary">
