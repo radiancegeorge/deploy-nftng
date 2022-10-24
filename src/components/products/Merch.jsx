@@ -4,7 +4,8 @@ import lightCart from "../../img/svg/light-cart-wrapped.svg";
 import darkCart from "../../img/svg/dark-cart-wrapped.svg";
 
 const Merch = ({ image, data, onAdd, checkAvailability, admin }) => {
-  const added = checkAvailability();
+  const added = checkAvailability(data);
+  console.log(added);
   return (
     <Container image={image}>
       <Wrapper>
@@ -34,7 +35,7 @@ const Container = styled.div`
       rgba(0, 0, 0, 0.8) 100%
     ),
     ${(p) => `url("${p.image}")`};
-  height: 50vh;
+  height: 45vh;
   border: 1px solid var(--primary-color);
   width: 100%;
   background-position: center;
@@ -46,7 +47,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +73,9 @@ const Wrapper = styled.div`
   }
   button {
     font-size: 12px;
-    padding: 10px;
+    font-family: var(--roboto);
+    font-weight: 700;
+    padding: 10px 14px;
   }
   @media screen and (max-width: 900px) {
     height: 380px;

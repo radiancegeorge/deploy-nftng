@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22ffc564.css",
-    "main.js": "/static/js/main.55d483f5.js",
+    "main.js": "/static/js/main.b22a9618.js",
     "static/media/NftngVideo.mp4": "/static/media/NftngVideo.9c575e80443d925dcb53.mp4",
     "static/media/LEDCalculator.ttf": "/static/media/LEDCalculator.cccf48e3277f82ae79b8.ttf",
     "static/media/mission-2.svg": "/static/media/mission-2.5fca24178d863826e961a5b88c607b3c.svg",
@@ -107,7 +107,6 @@
     "static/media/microphone.svg": "/static/media/microphone.c3c7124269de3310c58881911177ebc7.svg",
     "static/media/mouse.svg": "/static/media/mouse.2e634e75a112469f1ab6a9128ee61db7.svg",
     "static/media/crown.svg": "/static/media/crown.4fd3b41ca1b4cc7acb6206432bd9bf7d.svg",
-    "static/media/edit-2.svg": "/static/media/edit-2.a209a5817c373a64ca7e75e4dfd0a3cb.svg",
     "static/media/orange.svg": "/static/media/orange.dca36455b915c052614270f4238d7e4e.svg",
     "static/media/cloth.svg": "/static/media/cloth.a4431e2f99a790d6e6b78dd26ec684a5.svg",
     "static/media/close-circle-white.svg": "/static/media/close-circle-white.7051a85f9e5a7c85af5e5a85fc4fbc80.svg",
@@ -116,13 +115,12 @@
     "static/media/add-circle.svg": "/static/media/add-circle.d612304a0919d0ec7b4578b68043e97f.svg",
     "static/media/subs-circle.svg": "/static/media/subs-circle.7f04578b407372637a91f31dfbb977de.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.f46112f07c3bc86c40da6b1d5603e573.svg",
-    "static/media/add.svg": "/static/media/add.d230058af5a82374ef234c41473363ea.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.83641a6fa7332641f7fa5502fcf7048e.svg",
     "main.22ffc564.css.map": "/static/css/main.22ffc564.css.map",
-    "main.55d483f5.js.map": "/static/js/main.55d483f5.js.map"
+    "main.b22a9618.js.map": "/static/js/main.b22a9618.js.map"
   },
   "entrypoints": [
     "static/css/main.22ffc564.css",
-    "static/js/main.55d483f5.js"
+    "static/js/main.b22a9618.js"
   ]
 }

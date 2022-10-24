@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Footer from "../Footer";
 import arrow from "../../img/svg/arrow-left.svg";
+import EditProduct from "./EditProduct";
 import shopCart from "../../img/svg/shopping-cart.svg";
 import Cart from "./Cart";
-import { useNavigate, useLocation, Navigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Navigate } from "react-router-dom";
 import MerchandiseSection from "./MerchandiseSection";
 import CheckoutForm from "../forms/CheckoutForm";
 import Successful from "./Successful";
-// import Checkout from "./Checkout";
+import Checkout from "./Checkout";
 import { state, getCity } from "../../utils/getStateCity";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [cartValue, setCartValue] = useState([]);
-  const [admin, setAdmin] = useState(false);
 
   const handleAddToCart = (data) => {
     const exist = cartValue.some((d) => d.id === data.id);
@@ -41,22 +41,16 @@ const ProductDetail = () => {
       <Wrapper>
         {pathname !== "/products/successful" && (
           <div className="nav">
-            {pathname === "/products/merchandise" ? (
-              <h1>
-                Products/ <span>merchandise</span>
-              </h1>
-            ) : (
-              <h1>Your cart</h1>
-            )}
+            <h1>
+              Products/ <span>merchandise</span>
+            </h1>
 
-            <Link to="/products/cart">
-              <div className="cart">
-                <img src={shopCart} alt="" />
-                {cartValue.length ? (
-                  <p>{cartValue.length} item added to your cart</p>
-                ) : null}
-              </div>
-            </Link>
+            <div className="cart" onClick={() => navigate("/products/cart")}>
+              <img src={shopCart} alt="" />
+              {cartValue.length ? (
+                <p>{cartValue.length} item added to your cart</p>
+              ) : null}
+            </div>
           </div>
         )}
         {pathname === "/products/merchandise" ? (
@@ -64,11 +58,12 @@ const ProductDetail = () => {
             checkAvailability={checkAvailability}
             handleAddToCart={handleAddToCart}
             cartValue={cartValue}
-            admin={admin}
           />
         ) : pathname === "/products/cart" ? (
           <Cart cart={cartValue} />
         ) : pathname === "/products/checkout" ? (
+          <Checkout />
+        ) : pathname === "/products/checkoutform" ? (
           <CheckoutForm />
         ) : pathname === "/products/successful" ? (
           <Successful />
@@ -91,14 +86,13 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-
   min-height: 100vh;
   background-color: #252525;
 
   .back {
     position: absolute;
     cursor: pointer;
-    top: 18vh;
+    top: 15vh;
     left: 5vw;
     display: flex;
     align-items: center;
@@ -121,13 +115,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
   padding: 14vh 0;
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    width: 100%;
 
     .cart {
       width: fit-content;
@@ -185,4 +181,8 @@ const Wrapper = styled.div`
       }
     }
   }
+`;
+
+const Wrap = styled.div`
+  width: ${(p) => (p.toggleEdit ? "60vw" : "100%")};
 `;

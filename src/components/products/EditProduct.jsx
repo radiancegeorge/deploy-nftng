@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import add from "../../img/svg/gallery-add.svg";
 
-const EditProduct = () => {
+const EditProduct = ({ selectedEdit }) => {
+  const { image } = selectedEdit;
   const [number, setNumber] = useState("");
   const [quatity, setQuatity] = useState("");
   const [priceFocus, setPriceFocus] = useState(false);
   const [quatityFocus, setQuatityFocus] = useState(false);
   const [addImage, setAddImage] = useState("");
-  const [urlImage, setUrlImage] = useState("");
+  const [urlImage, setUrlImage] = useState(image || "");
 
   const handleAddImage = (e) => {
     let reader = new FileReader();
@@ -111,13 +112,14 @@ const EditProduct = () => {
 };
 
 export default EditProduct;
-
-const Container = styled.div``;
+const Container = styled.div`
+  margin: 27px 0;
+  flex: 1;
+`;
 
 const Wrapper = styled.div`
-  margin: 27px 0;
   display: flex;
-  height: 350px;
+  height: 100%;
   gap: 30px;
   input[type="file"] {
     display: none;
@@ -128,8 +130,8 @@ const Wrapper = styled.div`
 `;
 
 const AddCard = styled.div`
-  width: 260px;
-  height: 300px;
+  width: 16vw;
+  height: 18vw;
   background-color: rgba(255, 255, 255, 0.06);
 
   cursor: pointer;
@@ -156,12 +158,12 @@ const AddCard = styled.div`
 `;
 
 const AddImg = styled.div`
-  width: 260px;
+  width: 16vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   .img-wrap {
-    flex: 1;
+    height: 16vw;
     img {
       width: 100%;
       height: 100%;
@@ -198,7 +200,7 @@ const AddDesc = styled.div`
   flex: 1;
   input {
     background-color: transparent;
-    padding: 8px 10px;
+    padding: 16px;
     font-size: 14px;
     border-radius: 5px;
 
@@ -251,6 +253,10 @@ const Sizes = styled.div`
     display: flex;
     gap: 5px;
     margin-top: 5px;
+  }
+
+  label {
+    font-size: 0.8rem;
   }
 
   .select {

@@ -17,9 +17,6 @@ import Event from "./pages/Event";
 import Contact from "./pages/Contact";
 import Awards from "./pages/Awards";
 import Error from "./pages/Error";
-import Login from "./pages/Login";
-import Admin from "./pages/Admin";
-import AdminDetail from "./components/admin/AdminDetail";
 import ConnectWallet from "./components/wallet/ConnectWallet";
 
 function App() {
@@ -51,9 +48,6 @@ function App() {
         <Route path="/event" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/awards" element={<Awards />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/:id" element={<AdminDetail />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </main>

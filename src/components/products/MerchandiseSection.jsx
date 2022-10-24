@@ -6,7 +6,11 @@ import Merch from "./Merch";
 
 import { merchsData } from "../../data/merchsData";
 
-const MerchandiseSection = ({ checkAvailability, handleAddToCart, admin }) => {
+const MerchandiseSection = ({
+  checkAvailability,
+  handleAddToCart,
+  handleSelect,
+}) => {
   return (
     <Container>
       <Wrap>
@@ -18,7 +22,7 @@ const MerchandiseSection = ({ checkAvailability, handleAddToCart, admin }) => {
               image={jacob}
               data={data}
               checkAvailability={checkAvailability}
-              admin={admin}
+              handleSelect={handleSelect}
             />
           ))}
         </GridWrapper>
@@ -44,12 +48,11 @@ const Wrap = styled.div`
 `;
 
 const GridWrapper = styled.div`
-  padding: 40px 60px;
-
+  padding: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto);
-  gap: 0 30px;
+  gap: 0 3vw;
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;

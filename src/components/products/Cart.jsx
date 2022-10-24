@@ -24,7 +24,9 @@ const Cart = ({ cart }) => {
                 </div>
                 <p className="value">NGN30,000</p>
               </div>
-              <button>Checkout (NGN30,000)</button>
+              <button onClick={() => navigate("/products/checkout")}>
+                Checkout (NGN30,000)
+              </button>
             </div>
           </RightWrap>
         </Wrapper>
@@ -49,7 +51,7 @@ export default Cart;
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+
   display: flex;
   align-items: center;
   @media screen and (max-width: 900px) {

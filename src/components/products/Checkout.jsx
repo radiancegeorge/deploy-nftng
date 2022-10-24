@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import jacob from "../../img/Jacob.png";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <Wrapper>
@@ -38,7 +40,9 @@ const Checkout = () => {
               <p>Total</p>
               <span>N45,000</span>
             </div>
-            <button>Confirm to pay</button>
+            <button onClick={() => navigate("/products/successful")}>
+              Confirm to pay
+            </button>
           </Summary>
         </LeftWrapper>
         <RigthWrapper>
@@ -65,7 +69,9 @@ const Checkout = () => {
               </div>
             </div>
           </RightWrap>
-          <button>Modify cart</button>
+          <button onClick={() => navigate("/products/cart")}>
+            Modify cart
+          </button>
         </RigthWrapper>
       </Wrapper>
     </Container>
@@ -74,7 +80,9 @@ const Checkout = () => {
 
 export default Checkout;
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+`;
 
 const Wrapper = styled.div`
   display: flex;
