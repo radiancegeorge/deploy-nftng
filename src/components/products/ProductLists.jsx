@@ -32,7 +32,7 @@ const ProductLists = () => {
               Communities. Holders of the NFTNG pass get early priority access
               to the merchandise at discounted prices.
             </p>
-            <Link to="/coming-soon" className="btn-link">
+            <Link to="/products/merchandise" className="btn-link">
               Get merch
             </Link>
           </Wrap>
