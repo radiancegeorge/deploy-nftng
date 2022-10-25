@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import { CartContext } from "../../hooks/context";
 import img from "../../img/Jacob.png";
 
 const CartValue = ({item}) => {
-  console.log(item);
-  const [quantity,setQuantity]=useState(0)
+  // console.log(item);
+  const [quantity,setQuantity]=useState(1)
+
+  const {handleAddToCart}=useContext(CartContext)
   return (
     <Container>
-      <div className="remove">
+      <div className="remove" style={{cursorType:'pointer'}} onClick={()=>handleAddToCart(item)}>
         <svg
           width="20"
           height="20"
@@ -49,7 +52,7 @@ const CartValue = ({item}) => {
       <Wrapper>
         <div className="img-wrap">
           <img src={item.images[0].url} alt="" />
-          <span>BUZZ Hoodie</span>
+          <span>{item.name}</span>
         </div>
         <div className="detail">
           <div className="name">
@@ -78,7 +81,7 @@ const CartValue = ({item}) => {
             <Quantity>
               <p className="label">Quantity</p>
               <div className="counter">
-                <svg onClick={()=>setQuantity(quantity=>quantity-1)}
+                <svg onClick={()=>setQuantity(quantity=>quantity>0?quantity-1:handleAddToCart(item))}
                   width="26"
                   height="27"
                   viewBox="0 0 26 27"

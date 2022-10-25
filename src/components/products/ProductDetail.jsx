@@ -17,7 +17,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [cartValue, setCartValue] = useState([]);
-
+   const [total,setTotal]=useState(0)
 
   const handleAddToCart = (data) => {
     const exist = cartValue.some((d) => d.id === data.id);
@@ -31,9 +31,20 @@ const ProductDetail = () => {
   const checkAvailability = (val) => {
     return cartValue.some((arrVal) => val === arrVal);
   };
-
+  const [userDet,setUserDet]=useState({
+    firstName:'kachi',
+    lastName:'obi',
+    email:'test123@email.com',
+    phoneNumber:'08105685600',
+    state:'lagos',
+    city:'lagos',
+    town:'igando',
+    address:'2 isuti',
+    countryCode:'NG'
+  })
+  const [order,setOrder]=useState()
   return (
-    <CartContext.Provider value={{cartValue,setCartValue}}>
+    <CartContext.Provider value={{cartValue,setCartValue,handleAddToCart,total,setTotal,userDet,setUserDet,order,setOrder}}>
     <Container>
       {pathname !== "/products/successful" && (
         <div className="back" onClick={() => navigate(-1)}>

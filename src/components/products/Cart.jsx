@@ -1,13 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import CartValue from "./CartValue";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../hooks/context";
+import axios from "../../fetch/axios";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const {cartValue,setCartValue}=useContext(CartContext)
+  const {cartValue,setCartValue,setTotal,userDet,setOrder}=useContext(CartContext)
   const cart = cartValue;
+
+  const total=()=>{
+    let prices=cartValue.map(item=>{
+      return item.price*item.unit
+    })
+    let sum=0
+    for (let index = 0; index < prices.length; index++) {
+     sum += prices[index] ;
+      
+    }
+    setTotal(sum)
+    return sum
+  }
+  
+  const createOrder=async()=>{
+    const merchItem= await Promise.all(cartValue.map(async (item)=>{
+       return {
+         merchandiseId:item.id,
+         quantity:item.unit,
+         size:'XL'
+      }
+    }))
+   const res= await  axios['post']('/order',{...userDet,merchandiseItems:merchItem})
+   setOrder(res.data)
+   if(res)navigate("/products/checkout")
+  }
+  // useEffect(()=>{
+  //  console.log( total())
+  // },[cartValue])
   return (
     <Container>
       {cart.length ? (
@@ -28,10 +58,10 @@ const Cart = () => {
                   <p>Subtotal</p>
                   <p className="label">Delivery fees not included yet.</p>
                 </div>
-                <p className="value">NGN30,000</p>
+                <p className="value">NGN{total()}</p>
               </div>
-              <button onClick={() => navigate("/products/checkout")}>
-                Checkout (NGN30,000)
+              <button onClick={() => createOrder()}>
+                Checkout {total()}
               </button>
             </div>
           </RightWrap>
