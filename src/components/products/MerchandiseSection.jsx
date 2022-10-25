@@ -32,10 +32,6 @@ const MerchandiseSection = ({
     };
     return new IntersectionObserver(([entries]) => {
       const { isIntersecting } = entries;
-      console.log(
-        isIntersecting,
-        merchandiseData?.data?.totalPages > merchandiseData?.data?.page
-      );
 
       isIntersecting &&
         merchandiseData?.data?.totalPages > merchandiseData?.data?.page &&
