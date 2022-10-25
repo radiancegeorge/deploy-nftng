@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import CartValue from "./CartValue";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../hooks/context";
 
-const Cart = ({ cart }) => {
+const Cart = () => {
   const navigate = useNavigate();
-
-  console.log(cart);
+  const {cartValue,setCartValue}=useContext(CartContext)
+  const cart = cartValue;
   return (
     <Container>
       {cart.length ? (
         <Wrapper>
           <LeftWrap>
-            {/* <CartValue />
-            <CartValue /> */}{
-              cart?.map(item=>{
+            {
+              cart?.map(item=>(
                 <CartValue item={item}/>
-              })
+              ))
             }
           </LeftWrap>
           <RightWrap>
