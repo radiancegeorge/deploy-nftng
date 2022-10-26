@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import styled from "styled-components";
 import Footer from "../Footer";
 import arrow from "../../img/svg/arrow-left.svg";
@@ -11,26 +11,40 @@ import CheckoutForm from "../forms/CheckoutForm";
 import Successful from "./Successful";
 import Checkout from "./Checkout";
 import { state, getCity } from "../../utils/getStateCity";
+import { CartContext } from "../../hooks/context";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [cartValue, setCartValue] = useState([]);
+   const [total,setTotal]=useState(0)
 
   const handleAddToCart = (data) => {
     const exist = cartValue.some((d) => d.id === data.id);
     if (exist) {
       setCartValue(cartValue.filter((d) => d !== data));
     } else {
-      setCartValue([...cartValue, data]);
+      setCartValue([...cartValue, {...data,unit:1}]);
     }
   };
 
   const checkAvailability = (val) => {
     return cartValue.some((arrVal) => val === arrVal);
   };
-
+  const [userDet,setUserDet]=useState({
+    firstName:'kachi',
+    lastName:'obi',
+    email:'test123@email.com',
+    phoneNumber:'08105685600',
+    state:'lagos',
+    city:'lagos',
+    town:'igando',
+    address:'2 isuti',
+    countryCode:'NG'
+  })
+  const [order,setOrder]=useState()
   return (
+    <CartContext.Provider value={{cartValue,setCartValue,handleAddToCart,total,setTotal,userDet,setUserDet,order,setOrder}}>
     <Container>
       {pathname !== "/products/successful" && (
         <div className="back" onClick={() => navigate(-1)}>
@@ -60,7 +74,7 @@ const ProductDetail = () => {
             cartValue={cartValue}
           />
         ) : pathname === "/products/cart" ? (
-          <Cart cart={cartValue} />
+          <Cart  />
         ) : pathname === "/products/checkout" ? (
           <Checkout />
         ) : pathname === "/products/checkoutform" ? (
@@ -73,6 +87,7 @@ const ProductDetail = () => {
       </Wrapper>
       {pathname !== "/products/successful" && <Footer />}
     </Container>
+    </CartContext.Provider>
   );
 };
 

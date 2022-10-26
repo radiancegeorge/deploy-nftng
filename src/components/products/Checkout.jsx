@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import jacob from "../../img/Jacob.png";
 import { useNavigate } from "react-router-dom";
+import PaystackPop from "@paystack/inline-js";
+import { CartContext } from "../../hooks/context";
+
 
 const Checkout = () => {
+
+  const {total,order}=useContext(CartContext)
+   console.log(order);
   const navigate = useNavigate();
+  const paystack= new PaystackPop()
+  const testkey='pk_test_f111edd46517cecd2a5879f3466ceb851a7f48d9'
+  const initiateTransaction=()=>{
+    paystack.newTransaction({
+      amount: order?.totalAmount *100,
+      email: order.email,
+      key: testkey,
+      metadata: {
+        "orderId":order.id
+    },
+       onSuccess:()=>navigate("/products/successful")
+    })
+  }
   return (
     <Container>
       <Wrapper>
@@ -14,33 +33,33 @@ const Checkout = () => {
             <h2>Address Details</h2>
 
             <div className="detail">
-              <p>Adeyemo Nelson</p>
+              <p>{order?.firstName + " " + order?.lastName}</p>
               <p>
-                1b Adeyemi Ikorodu, Atisbo, Lagos
-                <p>+2347058946099</p>
+                {order?.address} {order?.state}
+                <p>{order?.phoneNumber}</p>
               </p>
-              <p>steve32@gmail.com</p>
+              <p>{order?.email}</p>
             </div>
           </Address>
           <Summary>
             <div className="s-wrap">
               <p>Subtotal</p>
-              <span>N45,000</span>
+              <span>N{total}</span>
             </div>
             <div className="s-wrap">
               <p>Delivery fee</p>
-              <span>N5,000</span>
+              <span>N{order.deliveryFee}</span>
             </div>
             <div className="s-wrap">
               <p>Discount</p>
-              <span className="discount">N5,000</span>
+              <span className="discount">N{order?.discountToken}</span>
             </div>
             <hr />
             <div className="s-wrap">
               <p>Total</p>
-              <span>N45,000</span>
+              <span>N{order?.totalAmount}</span>
             </div>
-            <button onClick={() => navigate("/products/successful")}>
+            <button onClick={() => initiateTransaction()}>
               Confirm to pay
             </button>
           </Summary>
