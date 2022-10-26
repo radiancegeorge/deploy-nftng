@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nftng
+  labels:
+    component: front-end
+spec:
+  containers:
+    - name: nftng-fe
+      image: radianceobi/nftng-fe
+      ports:
+        - containerPort: 3000
